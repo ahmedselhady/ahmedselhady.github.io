@@ -50,14 +50,14 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 
 # SEO Related
-google_site_verification : Ahmed Salem Mohamed Elhady Mohamed
+google_site_verification : "Ahmed Salem Mohamed Elhady Mohamed"
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : @a_s_elhady97
+  username               : "@a_s_elhady97"
 facebook:
   username               :
   app_id                 :
