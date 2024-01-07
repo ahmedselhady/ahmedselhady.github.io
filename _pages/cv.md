@@ -10,7 +10,7 @@ redirect_from:
 {% include base_path %}
 
 
-Work Experience
+## Work Experience
 ======
 
 <img src="https://icon.savepng.com/thumb/2020-06/28386-6-microsoft-logo-transparent-image-thumb.png" alt="Company Logo" width="120" height="120"/>  **Microsoft** <br/>
@@ -38,7 +38,7 @@ Software Engineer - Data Analytics <br/>
 
 ----
 
-<img src="https://cdn-icons-png.flaticon.com/512/4207/4207253.png" alt="Company Logo" width="40" height="40"/> Education
+## <img src="https://cdn-icons-png.flaticon.com/512/4207/4207253.png" alt="Company Logo" width="40" height="40"/> Education
 ======
 
 <img src="https://theigclub.com/wp-content/uploads/2022/07/Zewail-City.png" alt="Company Logo" width="70" height="70"/> **Zewail University of Science and Technology** <br/>
