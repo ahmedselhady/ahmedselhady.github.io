@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Ahmed S. M. Elhady Mohamed"
 title_separator          : "-"
 name                     : &name "Ahmed Mohamed"
-description              : &description "MSc. Student in AI/ML. Applied Data Scientist II@Microsoft, Egypt."
+description              : &description "Ph.D. Student in AI/ML. Applied Data Scientist II@Microsoft, Egypt."
 url                      : https://ahmedselhady.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ahmedselhady/ahmedselhady.github.io"
@@ -82,9 +82,9 @@ analytics:
 author:
   name             : "Ahmed S. Mohamed"
   avatar           : "me.png"
-  bio              : "Applied Data Scientist II @ Microsoft. MSc Student @ Zewail University of Science and Technology"
+  bio              : "PhD in AI/NLP @ HiTZ Labs, Ixa Group, Universidad del Pais Vasco. ex-Microsoft."
   location         : "Cairo, Egypt"
-  employer         : "Microsoft"
+  employer         : "HiTZ Labs @ UPV/EHU"
   pubmed           : 
   googlescholar    : 
   email            : "ahelhady511@gmail.com"
