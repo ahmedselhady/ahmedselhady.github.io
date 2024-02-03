@@ -14,7 +14,7 @@ redirect_from:
 
 <img src="https://icon.savepng.com/thumb/2020-06/28386-6-microsoft-logo-transparent-image-thumb.png" alt="Company Logo" width="120" height="120"/>  **Microsoft** <br/>
 NLP - Applied Data Scientist II <br/>
-📅 AUG 2023 - PRESENT &emsp; 📍 Cairo, Egypt <br/>
+📅 AUG 2023 - FEB 2024 &emsp; 📍 Cairo, Egypt <br/>
   * Working on Microsoft News’s text feed content understanding and moderation; combining LLMs and NLP models.
 
 <img src="https://miro.medium.com/v2/resize:fit:2400/1*OmmNgbPXTBZkdGi7BTO7xw.png" alt="Company Logo" width="70" height="70"/>  **Agolo** <br/>
