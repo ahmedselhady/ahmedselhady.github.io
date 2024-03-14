@@ -25,7 +25,7 @@ Highlights
 ===
 
 📅 March 13<sup>th</sup>, 2024 <br/>
-Our Paper <i> Improving Factuality in Clinical Abstractive Multi-Document Summarization by Guided Continued Pre-training </i> is accepted to NAACL'24 - Main Conference. [Link to be added] 
+Our Paper <i> Improving Factuality in Clinical Abstractive Multi-Document Summarization by Guided Continued Pre-training </i> is accepted to **NAACL'24 - Main Conference.** [Link to be added] 
 
 
 📅 November, 5<sup>th</sup>, 2023 <br/>
