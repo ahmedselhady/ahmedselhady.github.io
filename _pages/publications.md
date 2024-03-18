@@ -11,6 +11,6 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+ <a href="#" style="color: blue; text-decoration:none;">Improving Factuality in Clinical Abstractive Multi-Document Summarization by Guided Continued Pre-training</a> <br/>
+ **Ahmed Salem Elhadt**, Khaled Mostafa Elsayed, Eneko Agirre, Mikel Artetxe <br/>
+ main conference of *The Annual Conference of the North American Chapter of the Association for Computational Linguistics (NAACL'24)* (to appear)
