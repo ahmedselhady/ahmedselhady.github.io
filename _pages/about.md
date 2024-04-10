@@ -18,7 +18,6 @@ Before that, I worked as an NLP Research Engineer at <a href="https://www.agolo.
 I graduated from Cairo University Faculty of Engineering's Department of Computer Engineering with **GPA of 3.94/4.0**. <br/>
 I pursued my Master of Science Degree in Deep Learning and NLP at the University of Science and Technology at Zewail City, working on improving factual accuracy in abstractive summarization, supervised by <a href="https://scholar.google.com.eg/citations?user=cnfPK10AAAAJ&hl=en" style="color: blue; text-decoration:none;">Dr. Khaled Mostafa EL Sayed</a>, with **GPA of 4.0/4.0**. <br/>
 
-
 ---
 
 Highlights
@@ -36,3 +35,9 @@ Got accepted into Ph.D. Program at HiTZ Center funded by the Basque Government's
 📅 November, 5<sup>th</sup>, 2023 <br/>
 Our work on Faithful Clinical Literature Summarization ranks **1**<sup>**st**</sup> on AllenAI's MSLR/Cochrane Task <a href="https://leaderboard.allenai.org/mslr-cochrane/submissions/public" style="color: black; text-decoration:none;">🔗</a>
 
+---
+
+Talk to me about:
+===
+
+Technology, Linguistics, Religion, Philosophy, History, and Poetry 
