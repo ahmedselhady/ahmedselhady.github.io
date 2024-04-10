@@ -57,7 +57,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : "@a_s_elhady97"
+  username               : "@ahsalem511"
 facebook:
   username               :
   app_id                 :
@@ -309,3 +309,4 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+theme: minimal-mistakes-jekyll
