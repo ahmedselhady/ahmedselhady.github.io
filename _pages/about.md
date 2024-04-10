@@ -28,6 +28,11 @@ Highlights
 Our Paper <i> Improving Factuality in Clinical Abstractive Multi-Document Summarization by Guided Continued Pre-training </i> is accepted to **NAACL'24 - Main Conference.** [Link to be added] 
 
 
+📅 November, 12<sup>th</sup>, 2023 <br/>
+Got accepted into Ph.D. Program at HiTZ Center funded by the Basque Government's Research group funding IT-
+1805-22, IKER-GAITU project.
+
+
 📅 November, 5<sup>th</sup>, 2023 <br/>
 Our work on Faithful Clinical Literature Summarization ranks **1**<sup>**st**</sup> on AllenAI's MSLR/Cochrane Task <a href="https://leaderboard.allenai.org/mslr-cochrane/submissions/public" style="color: black; text-decoration:none;">🔗</a>
 
