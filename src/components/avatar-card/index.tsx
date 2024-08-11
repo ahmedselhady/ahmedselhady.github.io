@@ -2,22 +2,7 @@ import { FALLBACK_IMAGE } from '../../constants';
 import { Profile } from '../../interfaces/profile';
 import { skeleton } from '../../utils';
 import LazyImage from '../lazy-image';
-import { FaSquareThreads, FaGoogleScholar } from 'react-icons/fa6';
 import { MdLocationOn, MdPermPhoneMsg } from 'react-icons/md';
-import {
-  FaBehanceSquare,
-  FaBuilding,
-  FaDev,
-  FaFacebook,
-  FaGlobe,
-  FaLinkedin,
-  FaMastodon,
-  FaReddit,
-  FaSkype,
-  FaStackOverflow,
-  FaTelegram,
-  FaYoutube,
-} from 'react-icons/fa';
 
 interface AvatarCardProps {
   profile: Profile | null;
@@ -65,55 +50,7 @@ const companyLink = (company: string): string => {
   return `https://github.com/${company.substring(1)}`;
 };
 
-const OrganizationItem: React.FC<{
-  icon: React.ReactNode;
-  title: React.ReactNode;
-  value: React.ReactNode | string;
-  link?: string;
-  skeleton?: boolean;
-}> = ({ icon, title, value, link, skeleton = false }) => {
-  const renderValue = () => {
-    if (typeof value === 'string') {
-      return value.split(' ').map((company) => {
-        company = company.trim();
-        if (!company) return null;
 
-        if (isCompanyMention(company)) {
-          return (
-            <a
-              href={companyLink(company)}
-              target="_blank"
-              rel="noreferrer"
-              key={company}
-            >
-              {company}
-            </a>
-          );
-        } else {
-          return <span key={company}>{company}</span>;
-        }
-      });
-    }
-    return value;
-  };
-
-  return (
-    <div className="flex justify-start py-2 px-1 items-center">
-      <div className="flex-grow font-medium gap-2 flex items-center my-1">
-        {icon} {title}
-      </div>
-      <div
-        className={`${skeleton ? 'flex-grow' : ''
-          } text-sm font-normal text-right mr-2 ml-3 space-x-2 ${link ? 'truncate' : ''}`}
-        style={{
-          wordBreak: 'break-word',
-        }}
-      >
-        {renderValue()}
-      </div>
-    </div>
-  );
-};
 /**
  * Renders an AvatarCard component.
  * @param profile - The profile object.
