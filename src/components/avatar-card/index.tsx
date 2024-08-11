@@ -42,13 +42,7 @@ const ListItem: React.FC<{
     </div>
   );
 };
-const isCompanyMention = (company: string): boolean => {
-  return company.startsWith('@') && !company.includes(' ');
-};
 
-const companyLink = (company: string): string => {
-  return `https://github.com/${company.substring(1)}`;
-};
 
 
 /**

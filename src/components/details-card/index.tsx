@@ -103,10 +103,10 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               <div className="text-center font-bold text-2xl">
                 Reach Me @
               </div>
-              <div class="grid grid-cols-1 lg:grid-cols-6 gap-0 rounded-box">
+              <div className="grid grid-cols-1 lg:grid-cols-6 gap-0 rounded-box">
 
                 <ListItem
-                  icon={<SocialIcon size={34} url="https://github.com" />}
+                  icon={<SocialIcon iconSize={34} url="https://github.com" />}
                   title=""
                   value=""
                   link={`https://github.com/${github.username}`}
@@ -119,7 +119,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 />
                 {social?.twitter && (
                   <ListItem
-                    icon={<SocialIcon size={34} url="https://x.com" />}
+                    icon={<SocialIcon iconSize={34} url="https://x.com" />}
                     title=""
                     value=""
                     link={`https://twitter.com/${social.twitter}`}
@@ -127,7 +127,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 )}
                 {social?.linkedin && (
                   <ListItem
-                    icon={<SocialIcon size={34} url="https://linkedin.com" />}
+                    icon={<SocialIcon iconSize={34} url="https://linkedin.com" />}
                     title=""
                     value=""
                     link={`https://www.linkedin.com/in/${social.linkedin}`}
@@ -135,7 +135,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 )}
                 {social?.instagram && (
                   <ListItem
-                    icon={<SocialIcon size={34} url="https://instagram.com" />}
+                    icon={<SocialIcon iconSize={34} url="https://instagram.com" />}
                     title=""
                     value=""
                     link={`https://www.instagram.com/${social.instagram}`}
@@ -143,7 +143,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 )}
                 {social?.website && (
                   <ListItem
-                    icon={<FaGlobe size={20} />}
+                    icon={<FaGlobe iconSize={20} />}
                     title="Website:"
                     value={social.website
                       .replace('https://', '')
