@@ -116,7 +116,7 @@ const PublicationCard = ({
                     <br />
                   }
 
-                  <hr class="dashed" />
+                  <hr className="dashed" />
                   {item.description && (
                     <p className="mt-2 text-base-content text-opacity-60 text-sm text-justify">
                       {item.description}
