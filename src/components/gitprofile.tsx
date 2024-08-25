@@ -28,6 +28,7 @@ import { GithubProject } from '../interfaces/github-project';
 import GithubProjectCard from './github-project-card';
 import ExternalProjectCard from './external-project-card';
 import PublicationCard from './publication-card';
+import Footer from './footer';
 
 /**
  * Renders the GitProfile component.
@@ -282,8 +283,17 @@ const GitProfile = ({ config }: { config: Config }) => {
                 </div>
               </div>
             </div>
-
+            {sanitizedConfig.footer && (
+              <footer
+                className={`p-4 footer ${BG_COLOR} text-base-content footer-center`}
+              >
+                <div className="card compact bg-base-100 shadow">
+                  <Footer content={sanitizedConfig.footer} loading={loading} />
+                </div>
+              </footer>
+            )}
           </>
+          
         )}
       </div>
     </HelmetProvider>

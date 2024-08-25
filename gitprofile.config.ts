@@ -87,7 +87,7 @@ const CONFIG = {
   },
   resume: {
     fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+      'https://drive.google.com/file/d/1LsvIF-ihB7OG1sUz6ViusiCIeb-EKZLZ/view?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Generative AI',
@@ -101,6 +101,13 @@ const CONFIG = {
     'PostgresSql'
   ],
   experiences: [
+    {
+      company: 'Upwork',
+      position: 'Freelancer: AI Engineer -  Top Rated',
+      from: 'MAR 2024',
+      to: 'PRESENT',
+      companyLink: 'https://www.upwork.com/freelancers/~01d886eb5ee56e5f02?mp_source=share',
+    },
     {
       company: 'Microsoft',
       position: 'Applied Data Scientist II',
@@ -257,11 +264,7 @@ const CONFIG = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</a> and ❤️`,
+  footer: `Made with ❤️`,
 
   enablePWA: true,
 };
