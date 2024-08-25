@@ -1,17 +1,25 @@
 import React, { Fragment } from 'react';
 import { SanitizedExperience } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
+
+
+
 
 const ListItem = ({
   time,
   position,
   company,
   companyLink,
+  companyIcon,
 }: {
   time: React.ReactNode;
   position?: React.ReactNode;
   company?: React.ReactNode;
   companyLink?: string;
+  companyIcon?: any
 }) => (
   <li className="mb-5 ml-4">
     <div
@@ -21,16 +29,19 @@ const ListItem = ({
     <div className="my-0.5 text-xs">{time}</div>
     <h3 className="font-semibold">{position}</h3>
     <div className="mb-4 font-normal">
-      <a href={companyLink} target="_blank" rel="noreferrer">
+      
+
+      <FontAwesomeIcon icon={companyIcon} size="1x"  /> <a href={companyLink} target="_blank" rel="noreferrer">
         {company}
       </a>
     </div>
+
   </li>
 );
 
 const ExperienceCard = ({
   experiences,
-  loading,
+  loading
 }: {
   experiences: SanitizedExperience[];
   loading: boolean;
@@ -86,6 +97,7 @@ const ExperienceCard = ({
                         ? experience.companyLink
                         : undefined
                     }
+                    companyIcon={experience.companyIcon?experience.companyIcon: undefined }
                   />
                 ))}
               </Fragment>

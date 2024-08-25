@@ -1,4 +1,8 @@
 // gitprofile.config.ts
+import {
+  faUpwork,
+  faMicrosoft
+} from "@fortawesome/free-brands-svg-icons";
 
 const CONFIG = {
   github: {
@@ -45,7 +49,7 @@ const CONFIG = {
           description:
             'Extraction and refinement of Knowledge graph according to a given schema. OpenIE is used to do initial extractions, then Mistral-7b-v0.3 is employed to refine extractions and schema. The final graph is retrieved and utilized in retreival augmented generation (RAG) for question answering.',
           imageUrl:
-            './src/assets/img/daryiah.jpeg',
+            'https://github.com/ahmedselhady/ahmedselhady.github.io/blob/main/src/assets/img/daryiah.jpeg',
           link: '#',
         },
         {
@@ -53,7 +57,7 @@ const CONFIG = {
           description:
             'Web-based application to schedule irrigation jobs for farming enterprises. The application is consumed through Typical Engineering Solutions company, managing farming solutions for multiple enterprises in Saudi Aribia, Egypt, and Others.',
           imageUrl:
-            './src/assets/img/typical_scheduler.jpeg',
+            'https://github.com/ahmedselhady/ahmedselhady.github.io/blob/main/src/assets/img/typical_scheduler.jpeg',
           link: '#',
         },
       ],
@@ -107,6 +111,7 @@ const CONFIG = {
       from: 'MAR 2024',
       to: 'PRESENT',
       companyLink: 'https://www.upwork.com/freelancers/~01d886eb5ee56e5f02?mp_source=share',
+      companyIcon: faUpwork
     },
     {
       company: 'Microsoft',
@@ -114,6 +119,8 @@ const CONFIG = {
       from: 'AUG 2023',
       to: 'MAR 2024',
       companyLink: 'https://www.youtube.com/watch?v=KWcDW1gTobQ',
+      companyIcon: faMicrosoft
+
     },
     {
       company: 'Agolo',
