@@ -21,9 +21,7 @@ import {
   faGithub,
   faXTwitter,
   faInstagram,
-  faReadme,
-  faUpwork,
-  faWpbeginner
+  faReadme 
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -141,7 +139,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 )}
                 {social?.instagram && (
                   <ListItem
-                    icon={<FontAwesomeIcon icon={faInstagram} size="4x" style={{ color: '#e57b1d' }} />}
+                    icon={<FontAwesomeIcon icon={faInstagram  } size="4x" style={{ color: '#e57b1d' }} />}
                     title=""
                     value=""
                     link={`https://www.instagram.com/${social.instagram}`}
