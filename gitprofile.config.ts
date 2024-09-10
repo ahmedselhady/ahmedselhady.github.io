@@ -36,7 +36,17 @@ const CONFIG = {
       header: 'Personal Projects, Freelance, and Consultancy',
       // To hide the `External Projects` section, keep it empty.
       projects: [
+        {          
+          title: 'Engineering: TCEngine Document Intelligence Platform',
+          description:
+            'Built and supervised the development of the document intelligence platform for Trade Collaboration Engine. The multi-module platform included pdf parsing, sequence extraction and classification, and Generative AI integration. The platform helped providing outstanding performances for many clients.',
+          imageUrl:
+            'https://media.licdn.com/dms/image/v2/D560BAQFefQdjE3uVJQ/company-logo_200_200/company-logo_200_200/0/1680638060537/trade_collaboration_engine_logo?e=2147483647&v=beta&t=Lx3cVXegkgs6WZ-W6mdzxAiCtfm57YyXXJ7M-NDXlNg',
+          link: 'https://tcengine.com/',
+        },
         {
+
+
           title: 'Consultancy: Al Daryiah Generative AI',
           description:
             'Provided system architecture design to build an interactive generative AI solution.',

@@ -87,28 +87,28 @@ const PublicationCard = ({
             <div className="w-full">
               <div className="px-4">
                 <div className="text-center w-full">
-                  <h2 className="font-medium opacity-80 mb-4">{item.title}</h2>
+                  <h1 className="font-bold opacity-80 mb-5 text-2xl">{item.title}</h1>
                   {item.conferenceName && (
-                    <p className="text-base-content opacity-50 text-sm">
+                    <p className="text-base-content opacity-50 text-2xl">
                       {item.conferenceName}
                     </p>
                   )}{(
-                    <div className="flex items-center flex-row gap-0">
-                      <p className="text-base-content opacity-50 text-sm">
+                    <div className="flex">
+                      <p className="text-base-content opacity-50 text-lg mr-16">
                         {item.prefix_auth}
                       </p>
-                      <p className="text-base-content opacity-50 text-sm-bold">
+                      <p className="text-base-content opacity-50 text-2xl bold">
                         <strong>
                         {item.myself}
                         </strong>
                       </p>
-                      <p className="text-base-content opacity-50 text-sm">
+                      <p className="text-base-content opacity-50 text-2xl mr-16">
                         {item.post_authors}
                       </p>
                     </div>
                   )}
                   {item.journalName && (
-                    <p className="text-base-content opacity-70 text-sm">
+                    <p className="text-base-content opacity-80 text-2xl bold mt-4">
                       {item.journalName}
                     </p>
                   )}
@@ -118,7 +118,7 @@ const PublicationCard = ({
 
                   <hr className="dashed" />
                   {item.description && (
-                    <p className="mt-2 text-base-content text-opacity-60 text-sm text-justify">
+                    <p className="mt-2 text-base-content text-opacity-60 text-base text-justify">
                       {item.description}
                     </p>
                   )}
@@ -133,9 +133,9 @@ const PublicationCard = ({
 
   return (
     <Fragment>
-      <div className="col-span-1 lg:col-span-2">
-        <div className="grid grid-cols-2 gap-6">
-          <div className="col-span-2">
+      <div className="col-span-1 lg:col-span-3">
+        <div className="grid grid-cols-3 gap-6">
+          <div className="col-span-3">
             <div className="card compact bg-base-100 shadow bg-opacity-40">
               <div className="card-body">
                 <div className="mx-3 flex items-center justify-between mb-2">
@@ -150,7 +150,7 @@ const PublicationCard = ({
                   </h5>
                 </div>
                 <div className="col-span-2">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
                     {loading ? renderSkeleton() : renderPublications()}
                   </div>
                 </div>

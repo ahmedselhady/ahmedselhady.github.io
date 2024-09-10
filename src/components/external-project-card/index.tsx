@@ -95,12 +95,13 @@ const ExternalProjectCard = ({
             <div className="w-full">
               <div className="px-4">
                 <div className="text-center w-full">
-                  <h2 className="font-medium text-center opacity-60 mb-2">
+                  <h1 className="font-large text-center opacity-100 mb-10">
                     {item.title}
-                  </h2>
+                  </h1>
+                
                   {item.imageUrl && (
                     <div className="avatar opacity-90">
-                      <div className="w-full h-full mask mask-rectangle">
+                      <div className="w-48 h-48 mask mask-rectangle">
                           <LazyImage
                             src={item.imageUrl}
                             alt={'thumbnail'}
