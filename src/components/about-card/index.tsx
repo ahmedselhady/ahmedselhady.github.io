@@ -89,7 +89,7 @@ const AboutCard = ({
                   <h2 className=" opacity-80 mb-5 text-2xl">I am a PhD Research Student at The University of the Basque Country (UPV) under the supervision of <a className="font-bold" href="https://scholar.google.com/citations?user=N5InzP8AAAAJ">Mikel Artetxe</a> and <a className="font-bold" href="https://scholar.google.com/citations?user=kSuqts0AAAAJ&hl=en"> Eneko Agirre </a>.</h2>
                   <div className=" opacity-80 mb-5 text-2xl">I am working on the analysis, evaluation, and improvement of multilinguality in Large Language Models (LLMs)</div>
                   <div className="opacity-80 mb-5 text-2xl">Before embarking on my PhD, I worked as an Applied Data Scientist at <span className="font-bold">Microsoft Bing's</span> news and content moderation and understanding (now part of Windows and Web Experience)</div>
-                  <div className="opacity-80 mb-5 text-xl">I also worked as an Applied Data Scientist at <span className='font-bold' >Agolo</span>, a Microsoft-backed startup, where I worked on multiple projects building summarization solutions for elite clients such as Franklin Templeton, Associated Press, and Microsoft azure.</div>
+                  <div className="opacity-80 mb-5 text-2xl">I also worked as an Applied Data Scientist at <span className='font-bold' >Agolo</span>, a Microsoft-backed startup, where I worked on multiple projects building summarization solutions for elite clients such as Franklin Templeton, Associated Press, and Microsoft azure.</div>
 
                 </div>
               </div>
