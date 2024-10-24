@@ -193,7 +193,7 @@ const CONFIG = {
     {
       title: 'Improving Factuality in Clinical Abstractive Multi-Document Summarization by Guided Continued Pre-training',
       conferenceName: '',
-      journalName: 'NAACL 2024',
+      journalName: 'NAACL 2024 - Main Conference',
       prefix_auth: "",
       myself: "Ahmed Elhady,",
       post_authors: 'Khaled Mostafa Elsayed, Eneko Agirre, Mikel Artetxe',
