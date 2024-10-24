@@ -37,39 +37,38 @@ const CONFIG = {
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {          
-          title: 'Engineering: TCEngine Document Intelligence Platform',
+          title: 'TCEngine Document Intelligence Platform',
           description:
-            'Built and supervised the development of the document intelligence platform for Trade Collaboration Engine. The multi-module platform included pdf parsing, sequence extraction and classification, and Generative AI integration. The platform helped providing outstanding performances for many clients.',
+          'Build an LLM assistant for document processing. The assistant helps experts parse and assert the compliance of exports documentations to legal regulations. The solution is provided to Trade Collaboration Engine, and consumed by Blue Origin and Airbus.',
           imageUrl:
             'https://media.licdn.com/dms/image/v2/D560BAQFefQdjE3uVJQ/company-logo_200_200/company-logo_200_200/0/1680638060537/trade_collaboration_engine_logo?e=2147483647&v=beta&t=Lx3cVXegkgs6WZ-W6mdzxAiCtfm57YyXXJ7M-NDXlNg',
           link: 'https://tcengine.com/',
         },
         {
-
-
-          title: 'Consultancy: Al Daryiah Generative AI',
+          title: 'Al-Daryiah Gate AI Assistant',
           description:
-            'Provided system architecture design to build an interactive generative AI solution.',
+            'Al Daryiah Gate is one of the top real-estate managment companies in Saudi Arabia. I supervised and built the infrastructure for their LLM-based chat assistants. The assistants were used for reports parsing and summarization for adminstrative purposes.',
           imageUrl:
             'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/At-Turaif_District_of_Diriyah%2C_Saudi_Arabia.jpg/1200px-At-Turaif_District_of_Diriyah%2C_Saudi_Arabia.jpg',
           link: '#',
         },
         {
-          title: 'Freelance: Knowledge Graph building from PDFs',
+          title: 'Al-Daryiah Gate Multi-turn Multilingual Conversational Survey',
           description:
-            'Extraction and refinement of Knowledge graph according to a given schema. OpenIE is used to do initial extractions, then Mistral-7b-v0.3 is employed to refine extractions and schema. The final graph is retrieved and utilized in retreival augmented generation (RAG) for question answering.',
+            'Al Daryiah Gate is one of the top real-estate managment companies in Saudi Arabia. I provided them with complete solution of a multi-lingual multi-turn chat system. The assistants were used for providing conversational survey with realtors and buyers. It was also used by tourists to rate their experience of touristic facilities managed by Al Daryiah',
           imageUrl:
-            'https://github.com/ahmedselhady/ahmedselhady.github.io/blob/main/src/assets/img/daryiah.jpeg',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/At-Turaif_District_of_Diriyah%2C_Saudi_Arabia.jpg/1200px-At-Turaif_District_of_Diriyah%2C_Saudi_Arabia.jpg',
           link: '#',
         },
         {
-          title: 'Typical Company: Intelligent Scheduling System for Irrigation Pipelines',
+          title: 'Knowledge Graph building from PDFs',
           description:
-            'Web-based application to schedule irrigation jobs for farming enterprises. The application is consumed through Typical Engineering Solutions company, managing farming solutions for multiple enterprises in Saudi Aribia, Egypt, and Others.',
+            'This was sold to multiple clients: a python service that leverages LLMs for building knowledge graphs from unstructured PDFs. This was consumed by many clients such as: 1) RehabAI: a mobile application assistant that helps atheletes identify, metigate, and sometimes rehabilitate from sports injuries by quickly scanning through data files provided by physiotherapists.',
           imageUrl:
-            'https://github.com/ahmedselhady/ahmedselhady.github.io/blob/main/src/assets/img/typical_scheduler.jpeg',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrn9JK5dMutZDZ0WD3hc72UxGsxphsUT0i3KmY9giwHHjU3KwteNbVm4VJrSnSiACyxts&usqp=CAU',
           link: '#',
         },
+        
       ],
     },
   },
