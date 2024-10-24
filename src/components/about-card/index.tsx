@@ -6,7 +6,7 @@ const AboutCard = ({
   about,
   loading
 }: {
-  about: SanitizedAbout[];
+  about: string;
   loading: boolean;
 }) => {
   const renderSkeleton = () => {

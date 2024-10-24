@@ -240,7 +240,7 @@ const GitProfile = ({ config }: { config: Config }) => {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 rounded-box">
                       {
-                        <AboutCard loading={loading} about="I am Ahmed!"/>
+                        <AboutCard loading={loading} about=""/>
                       }
 
                       {sanitizedConfig.experiences.length !== 0 && (

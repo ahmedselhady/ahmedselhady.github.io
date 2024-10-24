@@ -108,7 +108,7 @@ export interface SanitizedPublication {
 
 
 export interface SanitizedAbout {
-  about: string;
+  about?: string;
 }
 
 export interface SanitizedGoogleAnalytics {
