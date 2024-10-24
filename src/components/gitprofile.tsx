@@ -30,7 +30,6 @@ import ExternalProjectCard from './external-project-card';
 import PublicationCard from './publication-card';
 import Footer from './footer';
 import AboutCard from './about-card';
-import { SanitizedAbout } from '../interfaces/sanitized-config';
 
 /**
  * Renders the GitProfile component.

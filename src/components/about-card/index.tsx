@@ -1,5 +1,4 @@
 import { Fragment } from 'react';
-import { SanitizedAbout } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
 
 const AboutCard = ({
@@ -74,7 +73,7 @@ const AboutCard = ({
   };
 
   const renderAbout = () => {
-    return [about].map((item, index) => (
+    return [about].map((index) => (
       <a
         className="card shadow-lg compact bg-base-100 cursor-pointer"
         key={index}
