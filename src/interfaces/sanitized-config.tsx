@@ -106,6 +106,11 @@ export interface SanitizedPublication {
   description?: string;
 }
 
+
+export interface SanitizedAbout {
+  about: string;
+}
+
 export interface SanitizedGoogleAnalytics {
   id?: string;
 }

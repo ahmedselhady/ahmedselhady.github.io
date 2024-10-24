@@ -21,18 +21,17 @@ const ListItem = ({
   companyLink?: string;
   companyIcon?: any
 }) => (
-  <li className="mb-5 ml-4">
+  <li className="mb-7 ml-4">
     <div
       className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
       style={{ left: '-4.5px' }}
     ></div>
-    <div className="my-0.5 text-xs">{time}</div>
-    <h3 className="font-semibold">{position}</h3>
-    <div className="mb-4 font-normal">
-      
-
-      <FontAwesomeIcon icon={companyIcon} size="1x"  /> <a href={companyLink} target="_blank" rel="noreferrer">
+    <div className="my-0.5 text-base">{time}</div>
+    <h3 className="font-bold text-base mb-2">{position}</h3>
+    <div className="mb-4 font-medium text-base ">
+      <FontAwesomeIcon icon={companyIcon} size="2x"  /> <a href={companyLink} target="_blank" rel="noreferrer">
         {company}
+        
       </a>
     </div>
 

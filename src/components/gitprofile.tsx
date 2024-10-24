@@ -29,6 +29,8 @@ import GithubProjectCard from './github-project-card';
 import ExternalProjectCard from './external-project-card';
 import PublicationCard from './publication-card';
 import Footer from './footer';
+import AboutCard from './about-card';
+import { SanitizedAbout } from '../interfaces/sanitized-config';
 
 /**
  * Renders the GitProfile component.
@@ -237,6 +239,9 @@ const GitProfile = ({ config }: { config: Config }) => {
                   <div className="grid grid-cols-1 gap-6">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 rounded-box">
+                      {
+                        <AboutCard loading={loading} about="I am Ahmed!"/>
+                      }
 
                       {sanitizedConfig.experiences.length !== 0 && (
                         <ExperienceCard

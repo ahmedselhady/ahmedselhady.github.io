@@ -15,15 +15,18 @@ const ListItem = ({
   thesis?:React.ReactNode;
   grade?:React.ReactNode;
 }) => (
-  <li className="mb-5 ml-4">
+  <li className="mb-3 ml-4">
     <div
       className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
       style={{ left: '-4.5px' }}
     ></div>
-    <div className="my-0.5 text-xs">{time}</div>
-    <h3 className="font-semibold">{degree}</h3>
-    <div className="mb-4 font-normal">{institution}</div>
-    <div className="mb-4 font-normal">{grade}<br/>{thesis}</div>
+    <div className="my-0.5 text-base">{time}</div>
+    <h3 className="font-extrabold text-lg mb-2">{degree}</h3>
+    <div className="mb-2 font-semibold text-base">{institution}</div>
+    <div className="mb-2 font-semibold text-base">{grade}</div>
+    <div className="mb-2 font-normal text-base">{thesis}</div>
+    <hr className="dashed border-gray-400" />
+
   </li>
 );
 
