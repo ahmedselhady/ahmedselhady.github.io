@@ -16,14 +16,16 @@ Before embarking on my PhD, I worked as an Applied Data Scientist at **Microsoft
 
 <p align="center">
 
-<a href="https://huggingface.co/ahmedselhady"><img alt="Models" src="https://img.shields.io/badge/Huggingface 🤗 - My Profile-blueviolet"></a>
+<a href="https://huggingface.co/ahmedselhady"><img alt="Models" src="https://img.shields.io/badge/🤗 Huggingface - Profile-blueviolet"></a>
 
-<a href="https://huggingface.co/ahmedselhady"><img alt="Models" src="https://img.shields.io/badge/ - My Scholar-blue"></a>
+<a href="https://scholar.google.com/citations?user=9gk2mKsAAAAJ&hl=en"><img alt="Models" src="https://img.shields.io/badge/Google Scholar-Profile-blue"></a>
   <br>
 </p>
 
 
 # News
+
+:calendar: **February 26th, 2025:** Preprint of our paper Wicked [Arxiv](https://elpais.com/proyecto-tendencias/2024-06-12/latxa-un-chatgpt-en-euskera-contra-la-brecha-digital-de-los-idiomas.html), [X-thread](https://x.com/ahsalem511/status/1894716087251456157), [Github Repo](https://github.com/ahmedselhady/wicked-benchmarks)
 
 :calendar: News Article about the group [Link](https://elpais.com/proyecto-tendencias/2024-06-12/latxa-un-chatgpt-en-euskera-contra-la-brecha-digital-de-los-idiomas.html)
 
