@@ -25,7 +25,7 @@ Before embarking on my PhD, I worked as an Applied Data Scientist at **Microsoft
 
 # News
 
-:calendar: **February 26th, 2025:** Preprint of our paper Wicked [Arxiv](https://elpais.com/proyecto-tendencias/2024-06-12/latxa-un-chatgpt-en-euskera-contra-la-brecha-digital-de-los-idiomas.html), [X-thread](https://x.com/ahsalem511/status/1894716087251456157), [Github Repo](https://github.com/ahmedselhady/wicked-benchmarks)
+:calendar: **February 26th, 2025:** Preprint of our paper Wicked [Arxiv](https://elpais.com/proyecto-tendencias/2024-06-12/latxa-un-chatgpt-en-euskera-contra-la-brecha-digital-de-los-idiomas.html), [X-thread](https://x.com/ahsalem511/status/1894716087251456157), [Github Repo](https://github.com/ahmedselhady/wicked-benchmarks) 
 
 :calendar: News Article about the group [Link](https://elpais.com/proyecto-tendencias/2024-06-12/latxa-un-chatgpt-en-euskera-contra-la-brecha-digital-de-los-idiomas.html)
 
