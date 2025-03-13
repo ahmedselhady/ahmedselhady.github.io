@@ -11,7 +11,7 @@ I am a PhD Research Student at the University of the Basque Country (UPV/EHU) un
 
 I am working on the analysis and improvement of multi-lingual capabilities in Large Language Models.
 
-Before embarking on my PhD, I worked as an Applied Data Scientist at **Microsoft Bing's** news and content moderation and understanding (now part of web and windows experience). I also worked as an Applied Data Scientist at **Agolo**, a Microsoft-backed startup, where I worked on multiple projects building summarization solutions for elite clients such as *Franklin Templeton*, *Acuity*, *Associated Press*. All the projects are part of Microsoft's Azure services now.
+Before embarking on my PhD, I worked as an Applied Data Scientist at **Microsoft Bing's** news and content moderation and understanding (now part of web and windows experience). I also worked as an Applied Data Scientist at **Implicit.ai** (formerly Agolo), a Microsoft-backed startup, where I worked on multiple projects building summarization solutions for elite clients such as *Franklin Templeton*, *Acuity*, *Associated Press*. All the projects are part of Microsoft's Azure services now.
 
 
 <p align="center">
