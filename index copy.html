@@ -240,17 +240,10 @@
       z-index: -1;
     }
 
-    .home-experience {
-      margin-top: 2rem;
+    .home-news {
+      margin-top: 3rem;
       padding-top: 2rem;
       border-top: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-
-    .home-experience > .section-label {
-      margin-bottom: 0;
     }
 
     .section-label {
@@ -262,98 +255,30 @@
       margin-bottom: 1.2rem;
     }
 
-    .exp-scroll {
-      overflow-x: auto;
-      margin: 0 -1rem;
-      padding: 0 1rem 0.35rem;
-      -webkit-overflow-scrolling: touch;
-      min-width: 0;
-    }
+    .news-list { list-style: none; }
 
-    @media (min-width: 900px) {
-      .exp-scroll { margin: 0; padding: 0; overflow-x: visible; }
-    }
-
-    .exp-columns {
+    .news-item {
       display: flex;
-      align-items: stretch;
-      --exp-count: 4;
-      min-width: max(100%, calc(var(--exp-count) * 7.5rem));
+      gap: 1.5rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--bg-secondary);
+      align-items: baseline;
     }
 
-    .exp-col {
-      flex: 1 1 0;
-      min-width: 6.75rem;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .exp-slab {
-      flex: 1 1 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      text-align: center;
-      min-height: auto;
-    }
-
-    .exp-slab-top {
-      padding-bottom: 0.9rem;
-      justify-content: flex-end;
-    }
-
-    .exp-slab-bot {
-      padding-top: 0.9rem;
-      justify-content: flex-start;
-    }
-
-    .exp-axis {
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-      height: 12px;
-    }
-
-    .exp-hline {
-      flex: 1 1 0;
-      min-width: 0;
-      height: 2px;
-      background: var(--border);
-    }
-
-    .exp-col:first-child .exp-hline-left { visibility: hidden; }
-    .exp-col:last-child .exp-hline-right { visibility: hidden; }
-
-    .exp-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--accent);
-      flex-shrink: 0;
-      box-shadow: 0 0 0 3px var(--bg);
-    }
-
-    .exp-period {
+    .news-date {
       font-family: var(--font-mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.04em;
+      font-size: 0.72rem;
       color: var(--ink-faint);
-      margin-bottom: 0.35rem;
+      white-space: nowrap;
+      min-width: 5.5rem;
     }
 
-    .exp-role {
-      font-size: 0.82rem;
-      font-weight: 400;
-      color: var(--ink);
-      line-height: 1.35;
-    }
-
-    .exp-org {
-      font-size: 0.74rem;
+    .news-text {
+      font-size: 0.95rem;
       color: var(--ink-muted);
-      margin-top: 0.3rem;
-      line-height: 1.4;
     }
+
+    .news-text strong { color: var(--ink); font-weight: 400; }
 
     /* ============================================================
        PUBLICATIONS TAB
@@ -771,19 +696,9 @@
       animation: slideUp 0.3s ease both;
     }
 
-    /* Opacity-only: transform on this block breaks horizontal overflow / stacking with the timeline */
-    #tab-home.tab-panel.active > .home-experience {
-      animation: homeExperienceIn 0.35s ease both;
-    }
-
     @keyframes slideUp {
       from { opacity: 0; transform: translateY(12px); }
       to   { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes homeExperienceIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
     }
   </style>
 </head>
@@ -825,13 +740,12 @@ const CONFIG = {
   // Home portrait — path relative to index.html (README default: photo.jpg)
   profilePhoto: "pp2.png",
 
-  // ── Work experience (home horizontal timeline, oldest → newest, left → right) ──
-  experience: [
-  { period: "— 2020", role: "BSc - Computer Engineering", org: "Cairo University, Egypt" },
-    { period: "2020 — 2022", role: "Applied Data Scientist", org: "Implicit-ai (Agolo)" },
-    { period: "2022 — 2024", role: "Applied Data Scientist", org: "Microsoft · Bing Trust & Safety" },
-    { period: "2024 — Present", role: "PhD Research Student", org: "UPV/EHU · Hitz Lab" },
-    { period: "2026", role: "Research Intern", org: "Cohere Labs" },
+  // ── News items ────────────────────────────────────────────────
+  news: [
+    { date: "Apr 2025", text: "Paper accepted at <strong>ACL 2025</strong>: cross-lingual alignment in low-resource settings." },
+    { date: "Jan 2025", text: "Started internship at <strong>Lab Name</strong>, working on multilingual tokenizers." },
+    { date: "Oct 2024", text: "Gave a talk at the <strong>Workshop Name</strong> on evaluation benchmarks." },
+    { date: "Sep 2024", text: "Awarded the <strong>Fellowship Name</strong> for 2024–25." },
   ],
 
   // ── Publications ──────────────────────────────────────────────
@@ -917,11 +831,9 @@ const CONFIG = {
         <img id="profile-photo" alt="Profile photo" onerror="(function(img){ var col=img.closest('.home-photo'), grid=img.closest('.home-grid'); col.style.display='none'; if(grid) grid.style.gridTemplateColumns='1fr'; })(this)">
       </div>
     </div>
-    <div class="home-experience">
-      <div class="section-label">Experience</div>
-      <div class="exp-scroll">
-        <div class="exp-columns" id="exp-timeline"></div>
-      </div>
+    <div class="home-news">
+      <div class="section-label">Recent News</div>
+      <ul class="news-list" id="news-list"></ul>
     </div>
   </div>
 
@@ -1025,29 +937,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   el('intro-text').innerHTML = C.intro.map((p, i) => `<p>${p}</p>`).join('');
   el('research-tags').innerHTML = C.researchTags.map(t => `<span class="tag">${t}</span>`).join('');
-
-  const exp = C.experience || [];
-  const expRoot = el('exp-timeline');
-  if (expRoot) {
-    expRoot.style.setProperty('--exp-count', String(Math.max(exp.length, 1)));
-    function expCard(e) {
-      return `<div class="exp-card"><div class="exp-period">${e.period}</div><div class="exp-role">${e.role}</div><div class="exp-org">${e.org}</div></div>`;
-    }
-    expRoot.innerHTML = exp.map((e, i) => {
-      const top = i % 2 === 0 ? expCard(e) : '';
-      const bot = i % 2 === 1 ? expCard(e) : '';
-      return `
-        <div class="exp-col">
-          <div class="exp-slab exp-slab-top">${top}</div>
-          <div class="exp-axis">
-            <span class="exp-hline exp-hline-left"></span>
-            <span class="exp-dot"></span>
-            <span class="exp-hline exp-hline-right"></span>
-          </div>
-          <div class="exp-slab exp-slab-bot">${bot}</div>
-        </div>`;
-    }).join('');
-  }
+  el('news-list').innerHTML = C.news.map(n =>
+    `<li class="news-item"><span class="news-date">${n.date}</span><span class="news-text">${n.text}</span></li>`
+  ).join('');
 
   // ── Publications ────────────────────────────────────────────
   function renderPubs(filter) {

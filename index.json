@@ -1,0 +1,26 @@
+[
+  {
+    "file": "tokenization-tax.md",
+    "date": "2025-03-12",
+    "type": "essay",
+    "title": "The Tokenization Tax: Why Non-English LLM Users Pay More",
+    "summary": "A closer look at how subword tokenization creates a hidden computational and financial cost for speakers of non-Latin-script languages.",
+    "tags": ["tokenization", "equity", "LLMs"]
+  },
+  {
+    "file": "weird-thing-about-zhuang.md",
+    "date": "2025-01-28",
+    "type": "quirk",
+    "title": "A Weird Thing About Zhuang and Why It Matters for NLP",
+    "summary": "Zhuang is the most-spoken language you've never heard of. It also breaks several assumptions that NLP researchers make without realizing it.",
+    "tags": ["low-resource", "language diversity", "quirks"]
+  },
+  {
+    "file": "what-is-cross-lingual-transfer.md",
+    "date": "2024-11-05",
+    "type": "explainer",
+    "title": "What Is Cross-Lingual Transfer, Actually?",
+    "summary": "An accessible explainer on one of the core ideas in multilingual NLP — written for a curious friend who keeps asking.",
+    "tags": ["explainer", "multilingual NLP", "fundamentals"]
+  }
+]

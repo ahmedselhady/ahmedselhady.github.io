@@ -1,0 +1,10 @@
+[
+  { "file": "alps.jpg",        "caption": "Somewhere in the Alps" },
+  { "file": "market.jpg",      "caption": "Market colors" },
+  { "file": "travel.jpg",      "caption": "Traveling light" },
+  { "file": "forest.jpg",      "caption": "Morning forest" },
+  { "file": "light.jpg",       "caption": "Late light" },
+  { "file": "geometry.jpg",    "caption": "City geometry" },
+  { "file": "wildflowers.jpg", "caption": "Wildflowers" },
+  { "file": "aerial.jpg",      "caption": "Aerial perspective" }
+]

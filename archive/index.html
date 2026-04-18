@@ -13,7 +13,7 @@
        ============================================================ */
     :root {
       /* Identity */
-      --name:              "Ahmed Salem Mohamed Elhady";
+      --name:              "Your Name";
 
       /* Colors */
       --bg:                #f5f0e8;
@@ -25,14 +25,10 @@
       --accent-light:      #f0ddd4;
       --border:            #cfc9be;
 
-      /* Layout */
-      --site-max-width:    1200px;
-
       /* Typography scale */
-      --font-display:      'Fira Code', 'JetBrains Mono', 'Hack', 'Cascadia Code', monospace;
-      --font-body:         'Fira Mono', 'JetBrains Mono', 'Hack', 'Cascadia Code', monospace;
-      --font-mono:         'Fira Code', 'JetBrains Mono', 'Hack', 'Cascadia Code', monospace;
- 
+      --font-display:      'Playfair Display', Georgia, serif;
+      --font-body:         'Source Serif 4', Georgia, serif;
+      --font-mono:         'JetBrains Mono', monospace;
     }
 
     /* ============================================================
@@ -46,7 +42,7 @@
       background: var(--bg);
       color: var(--ink);
       font-family: var(--font-body);
-      font-size: 10px;
+      font-size: 17px;
       line-height: 1.7;
       min-height: 100vh;
     }
@@ -60,7 +56,7 @@
        LAYOUT
        ============================================================ */
     .site-wrapper {
-      max-width: var(--site-max-width);
+      max-width: 860px;
       margin: 0 auto;
       padding: 0 2rem;
     }
@@ -240,17 +236,10 @@
       z-index: -1;
     }
 
-    .home-experience {
-      margin-top: 2rem;
+    .home-news {
+      margin-top: 3rem;
       padding-top: 2rem;
       border-top: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-
-    .home-experience > .section-label {
-      margin-bottom: 0;
     }
 
     .section-label {
@@ -262,98 +251,30 @@
       margin-bottom: 1.2rem;
     }
 
-    .exp-scroll {
-      overflow-x: auto;
-      margin: 0 -1rem;
-      padding: 0 1rem 0.35rem;
-      -webkit-overflow-scrolling: touch;
-      min-width: 0;
-    }
+    .news-list { list-style: none; }
 
-    @media (min-width: 900px) {
-      .exp-scroll { margin: 0; padding: 0; overflow-x: visible; }
-    }
-
-    .exp-columns {
+    .news-item {
       display: flex;
-      align-items: stretch;
-      --exp-count: 4;
-      min-width: max(100%, calc(var(--exp-count) * 7.5rem));
+      gap: 1.5rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--bg-secondary);
+      align-items: baseline;
     }
 
-    .exp-col {
-      flex: 1 1 0;
-      min-width: 6.75rem;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .exp-slab {
-      flex: 1 1 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      text-align: center;
-      min-height: auto;
-    }
-
-    .exp-slab-top {
-      padding-bottom: 0.9rem;
-      justify-content: flex-end;
-    }
-
-    .exp-slab-bot {
-      padding-top: 0.9rem;
-      justify-content: flex-start;
-    }
-
-    .exp-axis {
-      display: flex;
-      align-items: center;
-      flex-shrink: 0;
-      height: 12px;
-    }
-
-    .exp-hline {
-      flex: 1 1 0;
-      min-width: 0;
-      height: 2px;
-      background: var(--border);
-    }
-
-    .exp-col:first-child .exp-hline-left { visibility: hidden; }
-    .exp-col:last-child .exp-hline-right { visibility: hidden; }
-
-    .exp-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--accent);
-      flex-shrink: 0;
-      box-shadow: 0 0 0 3px var(--bg);
-    }
-
-    .exp-period {
+    .news-date {
       font-family: var(--font-mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.04em;
+      font-size: 0.72rem;
       color: var(--ink-faint);
-      margin-bottom: 0.35rem;
+      white-space: nowrap;
+      min-width: 5.5rem;
     }
 
-    .exp-role {
-      font-size: 0.82rem;
-      font-weight: 400;
-      color: var(--ink);
-      line-height: 1.35;
-    }
-
-    .exp-org {
-      font-size: 0.74rem;
+    .news-text {
+      font-size: 0.95rem;
       color: var(--ink-muted);
-      margin-top: 0.3rem;
-      line-height: 1.4;
     }
+
+    .news-text strong { color: var(--ink); font-weight: 400; }
 
     /* ============================================================
        PUBLICATIONS TAB
@@ -617,17 +538,9 @@
     /* ============================================================
        PERSONAL TAB
        ============================================================ */
-    .personal-top {
-      display: grid;
-      grid-template-columns: 1fr 240px;
-      gap: 3rem;
-      align-items: start;
+    .personal-bio {
+      max-width: 640px;
       margin-bottom: 3.5rem;
-    }
-
-    @media (max-width: 600px) {
-      .personal-top { grid-template-columns: 1fr; }
-      .personal-photo-col { order: -1; }
     }
 
     .personal-bio p {
@@ -635,26 +548,6 @@
       line-height: 1.8;
       color: var(--ink);
       margin-bottom: 1.2rem;
-    }
-
-    .personal-photo-col {
-      position: relative;
-    }
-
-    .personal-photo-col img {
-      width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      filter: sepia(8%) contrast(1.05);
-      display: block;
-    }
-
-    .personal-photo-col::after {
-      content: '';
-      position: absolute;
-      inset: 8px -8px -8px 8px;
-      border: 1px solid var(--border);
-      z-index: -1;
     }
 
     .photo-section-label {
@@ -771,19 +664,9 @@
       animation: slideUp 0.3s ease both;
     }
 
-    /* Opacity-only: transform on this block breaks horizontal overflow / stacking with the timeline */
-    #tab-home.tab-panel.active > .home-experience {
-      animation: homeExperienceIn 0.35s ease both;
-    }
-
     @keyframes slideUp {
       from { opacity: 0; transform: translateY(12px); }
       to   { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes homeExperienceIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
     }
   </style>
 </head>
@@ -795,43 +678,39 @@
 <script>
 const CONFIG = {
   // ── Personal Info ──────────────────────────────────────────────
-  name:        "Ahmed Salem Mohamed Elhady",
-  role:        "PhD Researcher · Multilingual GenAI",
-  institution: "Hitz Lab @ University of the Basque Country",
-  email:       "ahelhady511@gmail.com",
+  name:        "Your Name",
+  role:        "PhD Researcher · Multilingual NLP",
+  institution: "University of Somewhere",
+  email:       "you@university.edu",
 
   // ── Social links (set to null to hide) ────────────────────────
   links: {
-    scholar:  "https://scholar.google.com/citations?user=9gk2mKsAAAAJ&hl=en",
-    github:   "https://github.com/ahmedselhady",
-    twitter:  "https://x.com/a_s_elhady97",
-    linkedin: "https://www.linkedin.com/in/aselhady/",
+    scholar:  "https://scholar.google.com",
+    github:   "https://github.com/yourusername",
+    twitter:  "https://x.com/yourusername",
+    linkedin: null,
     cv:       "cv.pdf",
   },
 
   // ── Home page ──────────────────────────────────────────────────
   intro: [
     // First paragraph is displayed in italic serif. Rest are normal.
-    "Hi! I'm Salem...",
-    "I am a PhD Research Student at the University of the Basque Country (UPV/EHU) under the supervision of Mikel Artetxe and Eneko Agirre.",
-    "I am incoming Research Intern at Cohere Labs, working with Kelly Marchisio and Nithya Govindarajan.",
-    "I am working on the analysis and improvement of multi-lingual capabilities in Large Language Models, with a focus on the Intersection of Reasoning and Multilingualism.",
-    "Before embarking on my PhD, I worked as an Applied Data Scientist at Microsoft (Bing) Trust and Safety Alignment team. Before that, I worked as an Applied Data Scientist at Implicit-ai (formerly Agolo), a Microsoft-backed startup."
-
+    "I build machines that understand language — all of it.",
+    "I'm a PhD student at the University of Somewhere, advised by Prof. Advisor Name. My research focuses on making large language models work equitably across the world's linguistic diversity, from high-resource languages to the thousands of languages that current NLP largely ignores.",
+    "Before my PhD, I [brief past]. I care about [something beyond research].",
   ],
   researchTags: [
-    "Multilingual LLMs", "Reasoning", "Cross-lingual Transfer", "Multilingual Reasoning",
+    "Multilingual LLMs", "Low-resource NLP", "Cross-lingual Transfer",
+    "Tokenization", "Evaluation", "Language Diversity",
   ],
-  // Home portrait — path relative to index.html (README default: photo.jpg)
-  profilePhoto: "pp2.png",
+  profilePhoto: "photo.jpg",  // Place in same folder as index.html
 
-  // ── Work experience (home horizontal timeline, oldest → newest, left → right) ──
-  experience: [
-  { period: "— 2020", role: "BSc - Computer Engineering", org: "Cairo University, Egypt" },
-    { period: "2020 — 2022", role: "Applied Data Scientist", org: "Implicit-ai (Agolo)" },
-    { period: "2022 — 2024", role: "Applied Data Scientist", org: "Microsoft · Bing Trust & Safety" },
-    { period: "2024 — Present", role: "PhD Research Student", org: "UPV/EHU · Hitz Lab" },
-    { period: "2026", role: "Research Intern", org: "Cohere Labs" },
+  // ── News items ────────────────────────────────────────────────
+  news: [
+    { date: "Apr 2025", text: "Paper accepted at <strong>ACL 2025</strong>: cross-lingual alignment in low-resource settings." },
+    { date: "Jan 2025", text: "Started internship at <strong>Lab Name</strong>, working on multilingual tokenizers." },
+    { date: "Oct 2024", text: "Gave a talk at the <strong>Workshop Name</strong> on evaluation benchmarks." },
+    { date: "Sep 2024", text: "Awarded the <strong>Fellowship Name</strong> for 2024–25." },
   ],
 
   // ── Publications ──────────────────────────────────────────────
@@ -840,45 +719,104 @@ const CONFIG = {
     {
       year: 2025,
       type: "conference",
-      title: "Emergent Abilities of Large Language Models under Continued Pretraining for Language Adaptation",
-      authors: ["Ahmed Elhady", "Eneko Agirre", "Mikel Artetxe"],
+      title: "Cross-lingual Alignment Without Parallel Data: A Transfer Learning Approach",
+      authors: ["Your Name", "Collaborator A", "Advisor Name"],
       venue: "ACL 2025",
-      abstract: "Continued pretraining (CPT) is a popular approach to adapt existing large language models (LLMs) to new languages. When doing so, it is common practice to include a portion of English data in the mixture, but its role has not been carefully studied to date. In this work, we show that including English does not impact validation perplexity, yet it is critical for the emergence of downstream capabilities in the target language. We introduce a language-agnostic benchmark for in-context learning (ICL), which reveals catastrophic forgetting early on CPT when English is not included. This in turn damages the ability of the model to generalize to downstream prompts as measured by perplexity, even if it does not manifest in terms of accuracy until later in training, and can be tied to a big shift in the model parameters. Based on these insights, we introduce curriculum learning and exponential moving average (EMA) of weights as effective alternatives to mitigate the need for English. All in all, our work sheds light into the dynamics by which emergent abilities arise when doing CPT for language adaptation, and can serve as a foundation to design more effective methods in the future.",
-      links: { paper: "https://aclanthology.org/2025.acl-long.1547/", code: null, twitter: "https://x.com/ahsalem511/status/1930942337271619747?s=20", poster: null },
+      abstract: "We propose a method for aligning multilingual representations without parallel corpora, leveraging typological features and unsupervised objectives. Our approach achieves state-of-the-art results on 42 languages across three downstream tasks.",
+      links: { paper: "#", code: "#", slides: null, poster: null },
     },
     {
       year: 2025,
-      type: "conference",
-      title: "WiCkeD: A Simple Method to Make Multiple Choice Benchmarks More Challenging for Language Adaptation",
-      authors: ["Ahmed Elhady", "Eneko Agirre", "Mikel Artetxe"],
-      venue: "ACL 2025",
-      abstract: "We introduce WiCkeD, a simple method to increase the complexity of existing multiple-choice benchmarks by randomly replacing a choice with “None of the above”, a method often used in educational tests. We show that WiCkeD can be automatically applied to any existing benchmark, making it more challenging. We apply WiCkeD to 6 popular benchmarks and use it to evaluate 18 open-weight LLMs. The performance of the models drops12.1 points on average with respect to the original versions of the datasets. When using chainof-thought on 3 MMLU datasets, the performance drop for the WiCkeD variant is similar to the one observed when using the LLMs directly, showing that WiCkeD is also challenging for models with enhanced reasoning abilities. WiCkeD also uncovers that some models are more sensitive to the extra reasoning required, providing additional information with respect to the original benchmarks.We relase our code and data at github.com/anonymized.",
-      links: { paper: "https://aclanthology.org/2025.acl-short.94/", "twitter": "https://x.com/ahsalem511/status/1894716087251456157", slides: null, poster: null },
+      type: "preprint",
+      title: "Tokenization Disparities in Multilingual Language Models: A Large-Scale Analysis",
+      authors: ["Your Name", "Collaborator B"],
+      venue: "arXiv 2025",
+      abstract: "We systematically audit tokenization efficiency across 100 languages in 8 popular LLMs, revealing significant disparities that disadvantage speakers of low-resource languages and proposing mitigation strategies.",
+      links: { paper: "#", code: "#", slides: null, poster: null },
     },
     {
       year: 2024,
-      type: "conference",
-      title: "Improving Factuality in Clinical Abstractive Multi-Document Summarization through Guided Continued Pre-training",
-      authors: ["Ahmed Elhady", "Khaled Elsayed",  "Eneko Agirre", "Mikel Artetxe"],
-      venue: "NAACL 2024",
-      abstract: "Factual accuracy is an important property of neural abstractive summarization models, especially in fact-critical domains such as the clinical literature. In this work, we introduce a guided continued pre-training stage for encoder-decoder models that improves their understanding of the factual attributes of documents, which is followed by supervised fine-tuning on summarization. Our approach extends the pre-training recipe of BART to incorporate 3 additional objectives based on PICO spans, which capture the population, intervention, comparison, and outcomes related to a clinical study. Experiments on multi-document summarization in the clinical domain demonstrate that our approach is competitive with prior work, improving the quality and factuality of the summaries and achieving the best-published results in factual accuracy on the MSLR task.",
-      links: { paper: "https://aclanthology.org/2024.naacl-short.66/", code: null,  poster: null },
+      type: "workshop",
+      title: "Benchmarking LLMs on Under-Resourced African Languages",
+      authors: ["Collaborator C", "Your Name", "Advisor Name"],
+      venue: "AfricaNLP @ EACL 2024",
+      abstract: "We introduce a new benchmark covering 15 African languages and evaluate 12 LLMs, finding that even top-performing models fail catastrophically on basic tasks in these languages.",
+      links: { paper: "#", code: "#", slides: "#", poster: null },
     },
   ],
 
-  // ── Blog posts — loaded from blogs/index.json ─────────────────
-  // Do not add posts here. Edit blogs/index.json and add .md files instead.
+  // ── Blog posts & short articles ───────────────────────────────
+  // type: "essay" | "explainer" | "quirk" | "note"
+  posts: [
+    {
+      id: "tokenization-tax",
+      date: "2025-03-12",
+      type: "essay",
+      title: "The Tokenization Tax: Why Non-English LLM Users Pay More",
+      summary: "A closer look at how subword tokenization creates a hidden computational and financial cost for speakers of non-Latin-script languages.",
+      tags: ["tokenization", "equity", "LLMs"],
+      content: `
+        <p>When you prompt an LLM in English, a sentence like <em>"The quick brown fox"</em> typically costs 5 tokens. The same semantic content in many African or Southeast Asian languages can cost 3–5× more. This isn't a bug — it's a consequence of how subword tokenizers are trained.</p>
+        <h2>Why this happens</h2>
+        <p>Most popular LLMs use a byte-pair encoding (BPE) tokenizer trained predominantly on English and a handful of European languages. The vocabulary it learns reflects that distribution: common English morphemes get their own token, while entire words in Yoruba or Thai might be encoded character-by-character.</p>
+        <blockquote>The practical consequence: if you're using a commercial API, you're paying 3–5× more per query in your language. If you're computing perplexity, your numbers aren't comparable across languages.</blockquote>
+        <h2>What can we do about it?</h2>
+        <p>Several directions are being explored: language-balanced training corpora for tokenizers, adaptive vocabularies that expand for non-English languages, and fertility-aware evaluation metrics that account for tokenization disparities. My own work explores the third direction — but the problem is ultimately upstream: we need better tokenizers, trained on more balanced data.</p>
+        <p>The good news is that awareness is growing. The bad news is that most labs optimize tokenizers for English-centric benchmarks, so the incentive to fix this is weak. Until that changes, this "tokenization tax" remains a quiet form of linguistic discrimination baked into the infrastructure of AI.</p>
+      `,
+    },
+    {
+      id: "weird-thing-about-zhuang",
+      date: "2025-01-28",
+      type: "quirk",
+      title: "A Weird Thing About Zhuang and Why It Matters for NLP",
+      summary: "Zhuang is the most-spoken language you've never heard of. It also breaks several assumptions that NLP researchers make without realizing it.",
+      tags: ["low-resource", "language diversity", "quirks"],
+      content: `
+        <p>Zhuang is a Tai–Kadai language spoken by roughly 18 million people in southern China — more speakers than Dutch, yet nearly invisible in NLP research. Working with it taught me something I should have already known: our field's assumptions are provincial.</p>
+        <h2>The writing system surprise</h2>
+        <p>Zhuang has two orthographies in active use: a Latin-based script introduced in the 1950s, and a traditional script based on Chinese characters (方块壮字, Sawndip). Most existing Zhuang data online uses neither — it uses Chinese, because that's what Zhuang speakers are educated in.</p>
+        <p>This creates a fascinating problem for NLP: the "language" as it exists in digital form is actually code-switched text, not monolingual Zhuang. Any model trained on it inherits that structure.</p>
+        <blockquote>The data doesn't reflect the language. It reflects the language as filtered through sociolinguistic power structures.</blockquote>
+        <p>I keep this in mind whenever I see a paper claiming to "cover" a language based on web-crawled data. Coverage on paper; something messier in practice.</p>
+      `,
+    },
+    {
+      id: "what-is-cross-lingual-transfer",
+      date: "2024-11-05",
+      type: "explainer",
+      title: "What Is Cross-Lingual Transfer, Actually?",
+      summary: "An accessible explainer on one of the core ideas in multilingual NLP — written for a curious friend who keeps asking.",
+      tags: ["explainer", "multilingual NLP", "fundamentals"],
+      content: `
+        <p>A friend of mine — not an NLP person — keeps asking me what my research is actually about. I've given the elevator pitch so many times that I figured I should write it down properly.</p>
+        <h2>The core intuition</h2>
+        <p>Suppose you train a model to answer questions in English. Now you point it at a question in Swahili — a language it has never seen labeled data for. Surprisingly, with the right architecture and training, it can still do a reasonable job. That's cross-lingual transfer: knowledge learned in one language generalizing to another.</p>
+        <p>Why does it work? Because multilingual models learn representations that are, to some degree, language-agnostic. The concept of <em>negation</em>, or <em>named entities</em>, or <em>subject-verb agreement</em> has structural similarities across languages. A model that truly understands these concepts in English has learned something that partially applies elsewhere.</p>
+        <h2>Why it's hard</h2>
+        <p>The degree of transfer drops sharply for languages that are typologically distant from the training languages, use different scripts, or are severely underrepresented in pretraining data. A model trained on European languages transfers well to other European languages and poorly to, say, Amharic or Tibetan. The gap is large, and closing it is most of what I work on.</p>
+      `,
+    },
+  ],
 
   // ── Personal / Photography ────────────────────────────────────
   bio: [
-    "I am a family man and a father of a beautiful girl, around who I spend most of my off-work time. I recenty learned to cook with her, and it's become a hobby of mine.",
-    "I am a mixture of cinophile, hiker, biker, and weight lifter.",
-    "If I am not at my desk, you will find me biking by the beach, or at home binge watching some series when it is raining.",
-    "Photography is my way of capturing non-written beaty of the world."
+    "Outside of research, I spend a lot of time thinking about language in a different sense — the one that lives in food, music, and places.",
+    "I grew up in [Your hometown], and I've been fortunate enough to do fieldwork in several countries for my research. I started taking photos as a way to pay attention more carefully, and it stuck.",
+    "When I'm not at my desk, you'll find me at a farmers' market, on a long run with bad podcasts, or trying to learn yet another language very slowly.",
   ],
-  personalPhoto: "loly.jpg",  // Photo shown beside your bio — place file in same folder
 
-  // Photos loaded from blogs/photos/index.json — edit that file, not here.
+  // Photos: set src to image paths/URLs, add as many as you like
+  photos: [
+    { src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800", caption: "Somewhere in the Alps" },
+    { src: "https://images.unsplash.com/photo-1529686342540-1b43aec0df75?w=800", caption: "Market colors" },
+    { src: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800", caption: "Traveling light" },
+    { src: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800", caption: "Morning forest" },
+    { src: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800", caption: "Late light" },
+    { src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800", caption: "City geometry" },
+    { src: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800", caption: "Wildflowers" },
+    { src: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800", caption: "Aerial perspective" },
+  ],
 };
 </script>
 
@@ -901,8 +839,8 @@ const CONFIG = {
     <div class="nav-inner">
       <button class="tab-btn active" data-tab="home">Home</button>
       <button class="tab-btn" data-tab="publications">Publications</button>
-      <button class="tab-btn" data-tab="blog">Blog & Thoughts</button>
-      <button class="tab-btn" data-tab="personal">About me</button>
+      <button class="tab-btn" data-tab="blog">Blog & Quirks</button>
+      <button class="tab-btn" data-tab="personal">Personal</button>
     </div>
   </nav>
 
@@ -913,15 +851,13 @@ const CONFIG = {
         <div id="intro-text"></div>
         <div class="home-tags" id="research-tags"></div>
       </div>
-      <div class="home-photo" id="home-photo">
-        <img id="profile-photo" alt="Profile photo" onerror="(function(img){ var col=img.closest('.home-photo'), grid=img.closest('.home-grid'); col.style.display='none'; if(grid) grid.style.gridTemplateColumns='1fr'; })(this)">
+      <div class="home-photo">
+        <img id="profile-photo" src="" alt="Profile photo" onerror="this.parentElement.style.display='none'">
       </div>
     </div>
-    <div class="home-experience">
-      <div class="section-label">Experience</div>
-      <div class="exp-scroll">
-        <div class="exp-columns" id="exp-timeline"></div>
-      </div>
+    <div class="home-news">
+      <div class="section-label">Recent News</div>
+      <ul class="news-list" id="news-list"></ul>
     </div>
   </div>
 
@@ -958,12 +894,7 @@ const CONFIG = {
 
   <!-- PERSONAL -->
   <div class="tab-panel" id="tab-personal">
-    <div class="personal-top">
-      <div class="personal-bio" id="personal-bio"></div>
-      <div class="personal-photo-col">
-        <img id="personal-photo" alt="Personal photo" onerror="this.parentElement.style.display='none'">
-      </div>
-    </div>
+    <div class="personal-bio" id="personal-bio"></div>
     <div class="photo-section-label">Photography</div>
     <div class="photo-subtitle" id="photo-subtitle"></div>
     <div class="photo-grid" id="photo-grid"></div>
@@ -978,7 +909,7 @@ const CONFIG = {
 
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox">
-  <img id="lightbox-img" alt="">
+  <img id="lightbox-img" src="" alt="">
   <div class="lightbox-caption" id="lightbox-caption"></div>
 </div>
 
@@ -1016,38 +947,12 @@ document.addEventListener('DOMContentLoaded', () => {
   el('header-links').innerHTML = linksHTML;
 
   // ── Home ────────────────────────────────────────────────────
-  const homeGrid = document.querySelector('.home-grid');
-  if (C.profilePhoto) {
-    el('profile-photo').src = C.profilePhoto;
-  } else {
-    el('home-photo').style.display = 'none';
-    if (homeGrid) homeGrid.style.gridTemplateColumns = '1fr';
-  }
+  el('profile-photo').src = C.profilePhoto;
   el('intro-text').innerHTML = C.intro.map((p, i) => `<p>${p}</p>`).join('');
   el('research-tags').innerHTML = C.researchTags.map(t => `<span class="tag">${t}</span>`).join('');
-
-  const exp = C.experience || [];
-  const expRoot = el('exp-timeline');
-  if (expRoot) {
-    expRoot.style.setProperty('--exp-count', String(Math.max(exp.length, 1)));
-    function expCard(e) {
-      return `<div class="exp-card"><div class="exp-period">${e.period}</div><div class="exp-role">${e.role}</div><div class="exp-org">${e.org}</div></div>`;
-    }
-    expRoot.innerHTML = exp.map((e, i) => {
-      const top = i % 2 === 0 ? expCard(e) : '';
-      const bot = i % 2 === 1 ? expCard(e) : '';
-      return `
-        <div class="exp-col">
-          <div class="exp-slab exp-slab-top">${top}</div>
-          <div class="exp-axis">
-            <span class="exp-hline exp-hline-left"></span>
-            <span class="exp-dot"></span>
-            <span class="exp-hline exp-hline-right"></span>
-          </div>
-          <div class="exp-slab exp-slab-bot">${bot}</div>
-        </div>`;
-    }).join('');
-  }
+  el('news-list').innerHTML = C.news.map(n =>
+    `<li class="news-item"><span class="news-date">${n.date}</span><span class="news-text">${n.text}</span></li>`
+  ).join('');
 
   // ── Publications ────────────────────────────────────────────
   function renderPubs(filter) {
@@ -1102,101 +1007,37 @@ document.addEventListener('DOMContentLoaded', () => {
     renderPubs(btn.dataset.filter);
   });
 
-  // ── Markdown parser (no dependencies) ───────────────────────
-  function parseMarkdown(md) {
-    // Escape HTML in code blocks first, then process everything else
-    let html = md
-      // Fenced code blocks
-      .replace(/```(\w*)\n([\s\S]*?)```/g, (_, lang, code) =>
-        `<pre><code class="language-${lang}">${code.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</code></pre>`)
-      // Inline code
-      .replace(/`([^`]+)`/g, '<code>$1</code>')
-      // Images  ![alt](src)
-      .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" style="max-width:100%;margin:1.5rem 0;">')
-      // Links  [text](url)
-      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
-      // Headings
-      .replace(/^#### (.+)$/gm, '<h4>$1</h4>')
-      .replace(/^### (.+)$/gm,  '<h3>$1</h3>')
-      .replace(/^## (.+)$/gm,   '<h2>$1</h2>')
-      .replace(/^# (.+)$/gm,    '<h1>$1</h1>')
-      // Bold & italic
-      .replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
-      .replace(/\*\*(.+?)\*\*/g,     '<strong>$1</strong>')
-      .replace(/\*(.+?)\*/g,         '<em>$1</em>')
-      // Blockquotes
-      .replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>')
-      // Horizontal rules
-      .replace(/^---$/gm, '<hr>')
-      // Unordered lists
-      .replace(/((?:^[-*] .+\n?)+)/gm, match =>
-        '<ul>' + match.replace(/^[-*] (.+)$/gm, '<li>$1</li>') + '</ul>')
-      // Ordered lists
-      .replace(/((?:^\d+\. .+\n?)+)/gm, match =>
-        '<ol>' + match.replace(/^\d+\. (.+)$/gm, '<li>$1</li>') + '</ol>')
-      // Paragraphs: wrap non-tagged lines
-      .split(/\n{2,}/)
-      .map(block => {
-        block = block.trim();
-        if (!block) return '';
-        if (/^<(h[1-4]|ul|ol|pre|blockquote|hr|img)/.test(block)) return block;
-        return `<p>${block.replace(/\n/g, ' ')}</p>`;
-      })
-      .join('\n');
-    return html;
-  }
-
   // ── Blog ────────────────────────────────────────────────────
-  let blogPosts = [];
-
-  function renderBlogList(posts) {
-    if (!posts.length) {
-      el('blog-list').innerHTML = '<p style="color:var(--ink-muted);font-style:italic;">No posts yet.</p>';
-      return;
-    }
-    el('blog-list').innerHTML = posts.map(post => {
-      const d = fmt(post.date);
-      return `
-        <div class="blog-card" data-file="${post.file}">
-          <div class="blog-date-col">
-            <div class="blog-date-day">${d.day}</div>
-            <div class="blog-date-month">${d.month}</div>
-          </div>
-          <div>
-            <div class="blog-type">${post.type}</div>
-            <div class="blog-title">${post.title}</div>
-            <div class="blog-summary">${post.summary}</div>
-            <div class="blog-tags">${(post.tags||[]).map(t => `<span class="tag">${t}</span>`).join('')}</div>
-          </div>
-        </div>`;
-    }).join('');
-  }
-
-  async function openPost(post) {
-    el('article-type').textContent = post.type;
-    el('article-title').textContent = post.title;
+  el('blog-list').innerHTML = C.posts.map(post => {
     const d = fmt(post.date);
-    el('article-meta').textContent = d.full + '  ·  ' + (post.tags||[]).join(', ');
-    el('article-body').innerHTML = '<p style="color:var(--ink-faint);font-style:italic;">Loading…</p>';
-    el('blog-list-view').classList.add('hidden');
-    el('article-view').classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    try {
-      const resp = await fetch('blogs/' + post.file);
-      if (!resp.ok) throw new Error('Not found');
-      const md = await resp.text();
-      el('article-body').innerHTML = parseMarkdown(md);
-    } catch(e) {
-      el('article-body').innerHTML = '<p style="color:var(--ink-muted);">Could not load post. Make sure <code>blogs/' + post.file + '</code> exists.</p>';
-    }
-  }
+    return `
+      <div class="blog-card" data-id="${post.id}">
+        <div class="blog-date-col">
+          <div class="blog-date-day">${d.day}</div>
+          <div class="blog-date-month">${d.month}</div>
+        </div>
+        <div>
+          <div class="blog-type">${post.type}</div>
+          <div class="blog-title">${post.title}</div>
+          <div class="blog-summary">${post.summary}</div>
+          <div class="blog-tags">${post.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+        </div>
+      </div>`;
+  }).join('');
 
   el('blog-list').addEventListener('click', e => {
     const card = e.target.closest('.blog-card');
     if (!card) return;
-    const post = blogPosts.find(p => p.file === card.dataset.file);
-    if (post) openPost(post);
+    const post = C.posts.find(p => p.id === card.dataset.id);
+    if (!post) return;
+    const d = fmt(post.date);
+    el('article-type').textContent = post.type;
+    el('article-title').textContent = post.title;
+    el('article-meta').textContent = d.full + '  ·  ' + post.tags.join(', ');
+    el('article-body').innerHTML = post.content;
+    el('blog-list-view').classList.add('hidden');
+    el('article-view').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   el('back-btn').addEventListener('click', () => {
@@ -1204,33 +1045,16 @@ document.addEventListener('DOMContentLoaded', () => {
     el('blog-list-view').classList.remove('hidden');
   });
 
-  // Load blog index
-  fetch('blogs/index.json')
-    .then(r => r.ok ? r.json() : [])
-    .then(posts => { blogPosts = posts; renderBlogList(posts); })
-    .catch(() => renderBlogList([]));
-
   // ── Personal ────────────────────────────────────────────────
   el('personal-bio').innerHTML = C.bio.map(p => `<p>${p}</p>`).join('');
-  el('personal-photo').src = C.personalPhoto;
-  el('photo-subtitle').textContent = 'A few images from fieldwork travels and everyday life.';
+  el('photo-subtitle').textContent = `A few images from fieldwork travels and everyday life.`;
+  el('photo-grid').innerHTML = C.photos.map((p, i) =>
+    `<div class="photo-item" data-idx="${i}">
+      <img src="${p.src}" alt="${p.caption}" loading="lazy">
+      <div class="photo-caption">${p.caption}</div>
+    </div>`
+  ).join('');
   el('footer-note').textContent = `© ${new Date().getFullYear()} ${C.name}`;
-
-  // Load photos index
-  function renderPhotos(photos) {
-    el('photo-grid').innerHTML = photos.map((p, i) =>
-      `<div class="photo-item" data-idx="${i}">
-        <img src="blogs/photos/${p.file}" alt="${p.caption}" loading="lazy">
-        <div class="photo-caption">${p.caption}</div>
-      </div>`
-    ).join('');
-  }
-
-  let photoList = [];
-  fetch('blogs/photos/index.json')
-    .then(r => r.ok ? r.json() : [])
-    .then(photos => { photoList = photos; renderPhotos(photos); })
-    .catch(() => {});
 
   // ── Lightbox ────────────────────────────────────────────────
   const lightbox = el('lightbox');
@@ -1238,9 +1062,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const item = e.target.closest('.photo-item');
     if (!item) return;
     const idx = parseInt(item.dataset.idx);
-    const photo = photoList[idx];
-    if (!photo) return;
-    el('lightbox-img').src = 'blogs/photos/' + photo.file;
+    const photo = C.photos[idx];
+    el('lightbox-img').src = photo.src;
     el('lightbox-caption').textContent = photo.caption;
     lightbox.classList.add('open');
   });
