@@ -964,6 +964,8 @@ const CONFIG = {
         <img id="personal-photo" alt="Personal photo" onerror="this.parentElement.style.display='none'">
       </div>
     </div>
+    <div class="photo-section-label"></div>
+    <div class="photo-subtitle" id="photo-subtitle"></div>
     <div class="photo-grid" id="photo-grid"></div>
   </div>
 
@@ -1211,7 +1213,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Personal ────────────────────────────────────────────────
   el('personal-bio').innerHTML = C.bio.map(p => `<p>${p}</p>`).join('');
   el('personal-photo').src = C.personalPhoto;
-  el('photo-subtitle').textContent = 'A few images from fieldwork travels and everyday life.';
+  el('photo-subtitle').textContent = '';
   el('footer-note').textContent = `© ${new Date().getFullYear()} ${C.name}`;
 
   // Load photos index
