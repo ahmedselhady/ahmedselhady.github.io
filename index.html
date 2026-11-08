@@ -785,6 +785,91 @@
       from { opacity: 0; }
       to   { opacity: 1; }
     }
+    /* Research notebook visual system */
+    :root { --bg:#f2f0e9; --bg-secondary:#e7e4da; --ink:#101b29; --ink-muted:#435263; --ink-faint:#778392; --accent:#c5452d; --accent-light:#f3ded8; --border:#bdc4c7; --site-max-width:1180px; }
+    body { font-size:16px; line-height:1.68; background-image:linear-gradient(rgba(16,27,41,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(16,27,41,.025) 1px,transparent 1px); background-size:28px 28px; }
+    .site-wrapper { padding:0 clamp(1rem,4vw,3.25rem); }
+    header { padding:clamp(2rem,6vw,4.5rem) 0 2rem; border-bottom:2px solid var(--ink); }
+    .header-name { font-size:clamp(2rem,6vw,4.4rem); letter-spacing:-.075em; }
+    .header-role,.header-links a,.section-label,.tab-btn,.footer-note,.news-date,.tag,.photo-caption { font-family:var(--font-mono); }
+    .header-role { font-size:.82rem; }
+    .header-links a { font-size:.76rem; }
+    nav { background:rgba(242,240,233,.95); border-bottom:1px solid var(--ink); backdrop-filter:blur(12px); }
+    .nav-inner { overflow-x:auto; scrollbar-width:thin; }
+    .tab-btn { flex:0 0 auto; padding:1rem clamp(.75rem,2vw,1.35rem); font-size:.72rem; }
+    .tab-panel { padding:clamp(2rem,5vw,4rem) 0 5rem; }
+    .home-grid { grid-template-columns:minmax(0,1fr) minmax(160px,250px); gap:clamp(1.5rem,5vw,4.5rem); }
+    .home-intro p,.personal-bio p { font-size:clamp(1rem,1.5vw,1.18rem); line-height:1.8; }
+    .home-intro p:first-child { font-family:var(--font-display); font-style:normal; font-size:clamp(1.2rem,2vw,1.55rem); }
+    .tag { border-radius:0; border:1px solid rgba(197,69,45,.25); }
+    .home-photo img,.personal-photo-col img { filter:grayscale(12%) contrast(1.08); }
+    .section-label { color:var(--accent); }
+    .news-item { border-bottom:1px solid var(--border); }
+    .pub-year { color:transparent; -webkit-text-stroke:1px var(--ink-faint); }
+    .pub-title,.blog-title { letter-spacing:-.025em; }
+    .pub-card { border-bottom:1px solid var(--ink); }
+    .photo-grid { columns:3 240px; column-gap:1rem; }
+    .photo-item { padding:0 0 .8rem; }
+    .photo-item img { border:1px solid rgba(16,27,41,.14); }
+    .photo-caption { font-size:.72rem; }
+    .photo-tags { display:flex; flex-wrap:wrap; gap:.3rem; padding:.15rem 0 .4rem; }
+    .photo-tag { color:var(--ink-muted); font: .65rem var(--font-mono); }
+    .photo-tools { display:flex; gap:.75rem; align-items:center; flex-wrap:wrap; margin:1.2rem 0 1.8rem; }
+    .photo-search { flex:1 1 220px; min-width:0; }
+    input,select { font:inherit; color:var(--ink); background:rgba(255,255,255,.55); border:1px solid var(--border); border-radius:0; padding:.7rem .85rem; }
+    input:focus,select:focus { outline:2px solid var(--accent); outline-offset:2px; }
+    .panel-heading { display:flex; justify-content:space-between; align-items:end; gap:1rem; margin-bottom:1.5rem; border-bottom:1px solid var(--ink); padding-bottom:1rem; }
+    .panel-heading h2 { font-size:clamp(1.6rem,4vw,2.4rem); letter-spacing:-.06em; line-height:1.1; }
+    .panel-kicker { color:var(--accent); font: .7rem var(--font-mono); letter-spacing:.08em; text-transform:uppercase; }
+    .talk-card { display:grid; grid-template-columns:8rem 1fr; gap:1rem; padding:1.2rem 0; border-bottom:1px solid var(--border); }
+    .talk-date { color:var(--accent); font: .75rem var(--font-mono); }
+    .talk-title { font-weight:700; font-size:1.08rem; }
+    .talk-meta { color:var(--ink-muted); font-size:.9rem; }
+    .blog-card { grid-template-columns:5.5rem minmax(0,1fr); }
+    .blog-title { font-size:clamp(1.1rem,2vw,1.45rem); }
+    .article-body { overflow-wrap:anywhere; }
+    .article-body[dir="rtl"] { text-align:right; font-family:system-ui,sans-serif; font-size:1.08rem; }
+    .article-body pre { overflow:auto; padding:1rem; background:var(--ink); color:#f5f4ed; }
+    footer { border-top:1px solid var(--ink); }
+    @media(max-width:700px) {
+      .header-inner { align-items:flex-start; }
+      .home-grid { grid-template-columns:1fr; }
+      .home-photo { order:-1; width:min(58vw,230px); }
+      .personal-top { grid-template-columns:1fr; }
+      .personal-photo-col { order:-1; width:min(58vw,230px); }
+      .photo-grid { columns:2 145px; column-gap:.65rem; }
+      .photo-item { margin-bottom:.5rem; }
+      .talk-card { grid-template-columns:1fr; gap:.25rem; }
+    }
+    @media(max-width:420px) {
+      .site-wrapper { padding-inline:.85rem; }
+      .header-links { gap:.65rem 1rem; }
+      .tab-btn { padding:.85rem .65rem; font-size:.66rem; }
+      .blog-card { grid-template-columns:3.2rem minmax(0,1fr); gap:.8rem; }
+      .blog-date-day { font-size:1.7rem; }
+      .photo-grid { columns:2 125px; }
+    }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; scroll-behavior:auto!important; } }
+    /* Light observatory theme: cosmic on the landing panel, paper-bright elsewhere. */
+    :root { --bg:#f7f8f5; --bg-secondary:#edf0ed; --ink:#142334; --ink-muted:#526579; --ink-faint:#7f8d9c; --accent:#c14f3c; --accent-light:#f7e6df; --border:#cbd4dc; }
+    body { background-color:var(--bg); background-image:radial-gradient(rgba(20,35,52,.06) .65px, transparent .65px); background-size:13px 13px; }
+    header { border-color:#9eacb7; }
+    .home-grid { position:relative; isolation:isolate; overflow:hidden; padding:clamp(1.25rem,4vw,3.25rem); border:1px solid #c9d8e3; background:radial-gradient(ellipse at 78% 12%,rgba(178,213,232,.7),transparent 34%),radial-gradient(ellipse at 8% 96%,rgba(214,224,236,.65),transparent 40%),linear-gradient(135deg,#f0f7fa 0%,#f8faf7 55%,#f3f2ed 100%); box-shadow:0 14px 40px rgba(30,58,78,.07); }
+    .home-grid::before { content:""; position:absolute; inset:0; z-index:-1; opacity:.66; pointer-events:none; background-image:radial-gradient(circle at 12% 18%,#6685a0 0 1px,transparent 1.7px),radial-gradient(circle at 30% 74%,#6685a0 0 1px,transparent 1.7px),radial-gradient(circle at 58% 18%,#6685a0 0 1px,transparent 1.7px),radial-gradient(circle at 71% 58%,#6685a0 0 1.2px,transparent 2px),radial-gradient(circle at 90% 34%,#6685a0 0 1px,transparent 1.8px),radial-gradient(circle at 45% 45%,rgba(87,135,167,.16) 0 2px,transparent 2.8px); }
+    .home-grid::after { content:""; position:absolute; z-index:-1; right:12%; top:-18%; width:min(34vw,330px); aspect-ratio:1; border:1px solid rgba(84,124,150,.18); border-radius:50%; box-shadow:0 0 0 24px rgba(98,140,165,.045),0 0 0 52px rgba(98,140,165,.035); pointer-events:none; }
+    .home-intro p { color:#253a4d; }
+    .home-intro p:first-child { color:#10253a; }
+    .home-photo img { border:1px solid rgba(20,35,52,.16); box-shadow:0 12px 28px rgba(30,58,78,.15); }
+    .home-photo::after { border-color:#6e8aa0; }
+    .home-experience { padding-inline:clamp(.25rem,2vw,1rem); }
+    .tab-btn.active { color:var(--accent); }
+    .pub-card,.blog-card,.talk-card { transition:background .18s ease, transform .18s ease; }
+    .pub-card:hover,.blog-card:hover,.talk-card:hover { background:rgba(230,237,239,.42); }
+    .filter-btn,.pub-btn { border-radius:0; }
+    .photo-item { background:#fff; padding:.45rem; box-shadow:0 4px 16px rgba(20,35,52,.08); }
+    .photo-item img { border:0; }
+    .photo-caption { padding:.55rem .15rem .15rem; color:#354a5c; }
+    @media(max-width:700px) { .home-grid::after { right:-14%; top:-8%; width:58vw; } }
   </style>
 </head>
 <body>
@@ -900,8 +985,10 @@ const CONFIG = {
     <div class="nav-inner">
       <button class="tab-btn active" data-tab="home">Home</button>
       <button class="tab-btn" data-tab="publications">Publications</button>
+      <button class="tab-btn" data-tab="news">News & Talks</button>
       <button class="tab-btn" data-tab="blog">Blog & Thoughts</button>
-      <button class="tab-btn" data-tab="personal">About me</button>
+      <button class="tab-btn" data-tab="photography">Photography</button>
+      <button class="tab-btn" data-tab="personal">About</button>
     </div>
   </nav>
 
@@ -924,6 +1011,11 @@ const CONFIG = {
     </div>
   </div>
 
+  <div class="tab-panel" id="tab-news">
+    <div class="panel-heading"><div><div class="panel-kicker">Field notes / 01</div><h2>News & Talks</h2></div></div>
+    <div id="talk-list" class="news-list"></div>
+  </div>
+
   <!-- PUBLICATIONS -->
   <div class="tab-panel" id="tab-publications">
     <div class="pub-filter" id="pub-filter">
@@ -934,6 +1026,13 @@ const CONFIG = {
       <button class="filter-btn" data-filter="preprint">Preprint</button>
     </div>
     <div id="pub-list"></div>
+  </div>
+
+  <div class="tab-panel" id="tab-photography">
+    <div class="panel-heading"><div><div class="panel-kicker">Visual index / 02</div><h2>Photography</h2></div><div class="panel-kicker">Browse by tag</div></div>
+    <div class="photo-tools"><input class="photo-search" id="photo-search" type="search" placeholder="Search tags, places, captions…" aria-label="Search photos by tag, place, or caption"><select id="photo-tag-filter" aria-label="Filter photos by tag"><option value="">All tags</option></select></div>
+    <div class="photo-grid" id="photo-grid"></div>
+    <p class="photo-subtitle" id="photo-empty" hidden>No photographs match that search.</p>
   </div>
 
   <!-- BLOG -->
@@ -963,9 +1062,6 @@ const CONFIG = {
         <img id="personal-photo" alt="Personal photo" onerror="this.parentElement.style.display='none'">
       </div>
     </div>
-    <div class="photo-section-label"></div>
-    <div class="photo-subtitle" id="photo-subtitle"></div>
-    <div class="photo-grid" id="photo-grid"></div>
   </div>
 
   <footer>
@@ -1162,8 +1258,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="blog-date-month">${d.month}</div>
           </div>
           <div>
-            <div class="blog-type">${post.type}</div>
-            <div class="blog-title">${post.title}</div>
+            <div class="blog-type">${post.type || 'note'}</div>
+      <div class="blog-title" dir="${/[\u0600-\u06FF]/.test(post.title || '') ? 'rtl' : 'ltr'}">${post.title}</div>
             <div class="blog-summary">${post.summary}</div>
             <div class="blog-tags">${(post.tags||[]).map(t => `<span class="tag">${t}</span>`).join('')}</div>
           </div>
@@ -1172,8 +1268,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   async function openPost(post) {
-    el('article-type').textContent = post.type;
+    el('article-type').textContent = post.type || 'note';
     el('article-title').textContent = post.title;
+    el('article-body').dir = /[\u0600-\u06FF]/.test(post.title || '') ? 'rtl' : 'ltr';
     const d = fmt(post.date);
     el('article-meta').textContent = d.full + '  ·  ' + (post.tags||[]).join(', ');
     el('article-body').innerHTML = '<p style="color:var(--ink-faint);font-style:italic;">Loading…</p>';
@@ -1185,6 +1282,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const resp = await fetch('blogs/' + post.file);
       if (!resp.ok) throw new Error('Not found');
       const md = await resp.text();
+      el('article-body').dir = /[\u0600-\u06FF]/.test(md) ? 'rtl' : 'ltr';
       el('article-body').innerHTML = parseMarkdown(md);
     } catch(e) {
       el('article-body').innerHTML = '<p style="color:var(--ink-muted);">Could not load post. Make sure <code>blogs/' + post.file + '</code> exists.</p>';
@@ -1204,7 +1302,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Load blog index
-  fetch('blogs/index.json')
+  fetch('index.json')
     .then(r => r.ok ? r.json() : [])
     .then(posts => { blogPosts = posts; renderBlogList(posts); })
     .catch(() => renderBlogList([]));
@@ -1212,15 +1310,23 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Personal ────────────────────────────────────────────────
   el('personal-bio').innerHTML = C.bio.map(p => `<p>${p}</p>`).join('');
   el('personal-photo').src = C.personalPhoto;
-  el('photo-subtitle').textContent = '';
   el('footer-note').textContent = `© ${new Date().getFullYear()} ${C.name}`;
 
   // Load photos index
   function renderPhotos(photos) {
-    el('photo-grid').innerHTML = photos.map((p, i) =>
-      `<div class="photo-item" data-idx="${i}">
-        <img src="blogs/photos/${p.file}" alt="${p.caption}" loading="lazy">
+    const query = (el('photo-search').value || '').trim().toLocaleLowerCase();
+    const selectedTag = el('photo-tag-filter').value;
+    const filtered = photos.map((p, i) => ({...p, _idx:i})).filter(p => {
+      const tags = p.tags || [];
+      const haystack = [p.caption, p.location, ...tags].join(' ').toLocaleLowerCase();
+      return (!query || haystack.includes(query)) && (!selectedTag || tags.includes(selectedTag));
+    });
+    el('photo-empty').hidden = filtered.length > 0;
+    el('photo-grid').innerHTML = filtered.map(p =>
+      `<div class="photo-item" data-idx="${p._idx}">
+        <img src="${p.image || ('blogs/photos/' + p.file)}" alt="${p.caption}" loading="lazy">
         <div class="photo-caption">${p.caption}</div>
+        <div class="photo-tags">${(p.tags || []).map(t => `<span class="photo-tag">#${t}</span>`).join('')}</div>
       </div>`
     ).join('');
   }
@@ -1228,8 +1334,20 @@ document.addEventListener('DOMContentLoaded', () => {
   let photoList = [];
   fetch('blogs/photos/index.json')
     .then(r => r.ok ? r.json() : [])
-    .then(photos => { photoList = photos; renderPhotos(photos); })
+    .then(photos => {
+      photoList = photos;
+      const tags = [...new Set(photos.flatMap(p => p.tags || []))].sort((a,b) => a.localeCompare(b));
+      el('photo-tag-filter').innerHTML = '<option value="">All tags</option>' + tags.map(t => `<option value="${t}">${t}</option>`).join('');
+      renderPhotos(photos);
+    })
     .catch(() => {});
+  el('photo-search').addEventListener('input', () => renderPhotos(photoList));
+  el('photo-tag-filter').addEventListener('change', () => renderPhotos(photoList));
+
+  fetch('news.json').then(r => r.ok ? r.json() : null).then(items => {
+    if (!items) return;
+    el('talk-list').innerHTML = items.map(n => `<article class="talk-card"><div class="talk-date">${n.date}</div><div><div class="talk-title">${n.title}</div><div class="talk-meta">${n.kind || 'News'}${n.venue ? ' · ' + n.venue : ''}</div>${n.description ? `<p class="news-text">${n.description}</p>` : ''}${n.url ? `<a href="${n.url}" target="_blank" rel="noopener">Details ↗</a>` : ''}</div></article>`).join('');
+  }).catch(() => {});
 
   // ── Lightbox ────────────────────────────────────────────────
   const lightbox = el('lightbox');
@@ -1239,7 +1357,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const idx = parseInt(item.dataset.idx);
     const photo = photoList[idx];
     if (!photo) return;
-    el('lightbox-img').src = 'blogs/photos/' + photo.file;
+    el('lightbox-img').src = photo.image || ('blogs/photos/' + photo.file);
     el('lightbox-caption').textContent = photo.caption;
     lightbox.classList.add('open');
   });
@@ -1265,7 +1383,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Hash-based routing ──────────────────────────────────────
   function applyHash() {
     const hash = window.location.hash.slice(1);
-    const tabs = ['home','publications','blog','personal'];
+    const tabs = ['home','publications','news','blog','photography','personal'];
     if (tabs.includes(hash)) {
       document.querySelector(`[data-tab="${hash}"]`).click();
     }

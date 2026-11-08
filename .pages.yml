@@ -1,0 +1,97 @@
+media:
+  - name: images
+    label: Photography
+    input: blogs/photos
+    output: /blogs/photos
+    rename: safe
+    categories: [image]
+
+content:
+  - name: blog_posts
+    label: Markdown blog files
+    type: collection
+    path: blogs
+    filename: "{primary}.md"
+    format: raw
+    subfolders: false
+    exclude: ["README.md", "index.json"]
+    fields:
+      - name: body
+        type: code
+        options:
+          language: markdown
+
+  - name: blog_index
+    label: Blog titles and tags
+    type: file
+    path: index.json
+    format: json
+    list: true
+    fields:
+      - name: file
+        type: string
+        required: true
+      - name: date
+        type: date
+        required: true
+      - name: title
+        type: string
+        required: true
+      - name: summary
+        type: text
+      - name: type
+        type: select
+        options:
+          values: [essay, explainer, note, reflection]
+      - name: tags
+        type: string
+        list: true
+
+  - name: photo_index
+    label: Photography and tags
+    type: file
+    path: blogs/photos/index.json
+    format: json
+    list: true
+    fields:
+      - name: image
+        label: Upload photo
+        type: image
+        required: true
+        options:
+          media: images
+      - name: caption
+        type: string
+      - name: location
+        type: string
+      - name: tags
+        type: string
+        list: true
+
+  - name: news_talks
+    label: News and talks
+    type: file
+    path: news.json
+    format: json
+    list: true
+    fields:
+      - name: date
+        type: string
+        required: true
+      - name: kind
+        type: select
+        options:
+          values: [Paper, Talk, Award, Position, News]
+      - name: title
+        type: string
+        required: true
+      - name: venue
+        type: string
+      - name: description
+        type: text
+      - name: url
+        type: string
+
+settings:
+  content:
+    merge: true

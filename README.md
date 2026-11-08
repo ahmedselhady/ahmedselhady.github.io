@@ -1,81 +1,26 @@
-# My Academic Website
+# Ahmed Elhady — academic website
 
-## File Structure
+The public site is a static GitHub Pages site. Its editable content is stored in this repository; no publishing token is exposed in the browser.
 
-```
-index.html              ← Main site (edit CONFIG at the top)
-personal.jpg            ← Your personal page portrait
-photo.jpg               ← Your home page profile photo
+## Publish content from your phone
 
-blogs/
-  index.json            ← Blog manifest: list of all posts
-  my-post.md            ← A blog post in Markdown
-  another-post.md       ← Another blog post
+1. Open [Pages CMS](https://pagescms.org/) and sign in with the GitHub account that owns this repository.
+2. Select `ahmedselhady.github.io` and the `main` branch. The repository's `.pages.yml` config exposes only its blog, photo, and news content.
+3. Use **Photography and tags** to upload an image from your phone, add a caption/location, and enter tags. Save; the image and its searchable metadata are committed to the repository.
+4. Use **Markdown blog files** to create a `.md` post. Then add the matching filename, title, date, summary, and tags under **Blog titles and tags**. The blog index displays title and tags, and the post body remains Markdown.
+5. Use **News and talks** to add an item to both the homepage feed and the dedicated tab.
 
-  photos/
-    index.json          ← Photo manifest: list of images + captions
-    alps.jpg            ← A photo
-    market.jpg          ← Another photo
-    ...
-```
+Repository access is the publishing boundary: only people with write access to the GitHub repository can publish. Keep that access limited to your account. Pages CMS is a separate authenticated editor; the public site has no upload form or credentials.
 
----
+## Local preview
 
-## Adding a blog post
+Run `python3 -m http.server 8000` from the repository root and open `http://localhost:8000`. Fetch-based content does not load when opening the HTML file directly.
 
-1. Write your post as a `.md` file and drop it in `blogs/`
-2. Add an entry to `blogs/index.json`:
+## Content files
 
-```json
-{
-  "file": "my-new-post.md",
-  "date": "2025-04-10",
-  "type": "essay",
-  "title": "My New Post Title",
-  "summary": "A one-sentence teaser shown in the list.",
-  "tags": ["tag1", "tag2"]
-}
-```
-
-**Post types:** `essay` · `explainer` · `quirk` · `note`
-
-### Markdown features supported
-
-- `# H1` through `#### H4` headings
-- `**bold**`, `*italic*`, `***bold italic***`
-- `> blockquote`
-- `` `inline code` `` and fenced code blocks (` ``` `)
-- `[link text](url)` and `![alt](image-path)`
-- `- unordered` and `1. ordered` lists
-- `---` horizontal rules
-
-Images in posts can reference files in `blogs/photos/` like this:
-
-```markdown
-![A caption](photos/my-image.jpg)
-```
-
----
-
-## Adding photos (Personal tab)
-
-1. Drop your image files into `blogs/photos/`
-2. Add entries to `blogs/photos/index.json`:
-
-```json
-{ "file": "my-photo.jpg", "caption": "A short caption" }
-```
-
----
-
-## Deploying to GitHub Pages
-
-1. Create a repo named `yourusername.github.io`
-2. Push all files (keeping the `blogs/` folder structure)
-3. Go to Settings → Pages → Source: `main` branch, `/ (root)`
-4. Your site is live at `https://yourusername.github.io`
-
-> **Note:** The site uses `fetch()` to load blog posts and photos,
-> so it must be served over HTTP(S). It won't work by opening
-> `index.html` directly from the file system.
-> To preview locally, run: `python -m http.server 8000`
+- `index.html` — deployed page and design.
+- `news.json` — entries shown in the News & Talks tab.
+- `index.json` — blog list metadata (titles, dates, summaries, and tags).
+- `blogs/*.md` — Markdown article bodies.
+- `blogs/photos/index.json` and `blogs/photos/*` — photo metadata and image files.
+- `.pages.yml` — Pages CMS editor configuration.
