@@ -128,6 +128,9 @@
     .photo-tags { display:flex; flex-wrap:wrap; gap:.3rem; padding:.15rem .25rem .3rem; }
     .photo-tag { color:var(--blue); font:500 .59rem var(--mono); }
     .photo-subtitle { margin-top:1rem; color:var(--muted); font:400 .9rem var(--serif); }
+    .floating-add { position:fixed; right:clamp(1rem,3vw,2rem); bottom:calc(1.2rem + env(safe-area-inset-bottom)); z-index:90; display:inline-flex; align-items:center; gap:.55rem; min-height:50px; padding:.72rem 1rem .72rem .8rem; background:var(--ink); color:#fff; border:1px solid var(--ink); box-shadow:0 8px 22px rgba(29,48,48,.2); font:500 .7rem var(--mono); text-transform:uppercase; letter-spacing:.06em; transition:transform .2s,background .2s,color .2s,box-shadow .2s; }
+    .floating-add:hover { transform:translateY(-3px); background:var(--acid); color:var(--ink); box-shadow:0 12px 28px rgba(29,48,48,.25); text-decoration:none; }
+    .floating-add svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:square; }
     .lightbox { display:none; position:fixed; inset:0; z-index:1000; align-items:center; justify-content:center; background:rgba(9,28,41,.94); cursor:zoom-out; }
     .lightbox.open { display:flex; animation:fadeIn .22s ease; }
     .lightbox img { max-width:90vw; max-height:84vh; object-fit:contain; box-shadow:0 30px 80px #0008; }
@@ -173,6 +176,7 @@
       .talk-card { grid-template-columns:1fr; gap:.25rem; }
       .panel-heading { align-items:flex-start; flex-direction:column; }
       .photo-grid { columns:2 135px; column-gap:.55rem; }
+      .floating-add { right:1rem; bottom:calc(1rem + env(safe-area-inset-bottom)); min-height:48px; }
       footer { flex-direction:column; }
     }
     @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; } }
@@ -340,10 +344,16 @@ const CONFIG = {
     <div class="photo-tools"><input class="photo-search" id="photo-search" type="search" placeholder="Search tags, places, captions…" aria-label="Search photos by tag, place, or caption"><select id="photo-tag-filter" aria-label="Filter photos by tag"><option value="">All tags</option></select></div>
     <div class="photo-grid" id="photo-grid"></div>
     <p class="photo-subtitle" id="photo-empty" hidden>No photographs match that search.</p>
+    <a class="floating-add" href="https://app.pagescms.org/" target="_blank" rel="noopener" aria-label="Open Pages CMS to upload a photo" title="Upload a photo">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span>Add photo</span>
+    </a>
   </div>
 
   <!-- BLOG -->
   <div class="tab-panel" id="tab-blog">
+    <a class="floating-add" href="https://app.pagescms.org/" target="_blank" rel="noopener" aria-label="Open Pages CMS to write a Markdown blog post" title="Write a blog post">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span>New post</span>
+    </a>
     <div class="blog-list-view" id="blog-list-view">
       <div id="blog-list"></div>
     </div>

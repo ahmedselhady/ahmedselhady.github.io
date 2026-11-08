@@ -10,6 +10,8 @@ The public site is a static GitHub Pages site. Its editable content is stored in
 4. Use **Markdown blog files** to create a `.md` post. Then add the matching filename, title, date, summary, and tags under **Blog titles and tags**. The blog index displays title and tags, and the post body remains Markdown.
 5. Use **News and talks** to add an item to both the homepage feed and the dedicated tab.
 
+The **New post** and **Add photo** buttons on the public site open the authenticated Pages CMS app in a new tab. In Pages CMS, choose this repository and its `main` branch, then use the matching content collection.
+
 Repository access is the publishing boundary: only people with write access to the GitHub repository can publish. Keep that access limited to your account. Pages CMS is a separate authenticated editor; the public site has no upload form or credentials.
 
 ## Local preview
