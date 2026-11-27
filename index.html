@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css?v=8">
-  <script type="module" src="site.js?v=8"></script>
+  <link rel="stylesheet" href="site.css?v=9">
+  <script type="module" src="site.js?v=10"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -42,9 +42,12 @@
           </div>
           <a class="button primary" id="collaboration">Contact for collaboration</a>
         </div>
-        <figure class="portrait" id="portrait" hidden>
-          <img id="profile-image" width="704" height="1472" alt="">
-        </figure>
+        <div class="profile-media">
+          <figure class="portrait" id="portrait" hidden>
+            <img id="profile-image" width="704" height="1472" alt="">
+          </figure>
+          <div class="profile-links" id="profile-links" role="group" aria-label="Contact and social profiles" hidden></div>
+        </div>
       </article>
       <section class="news" aria-labelledby="news-title">
         <div class="section-heading">

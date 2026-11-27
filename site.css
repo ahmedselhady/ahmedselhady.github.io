@@ -36,7 +36,7 @@ main { min-height: 65vh; }
 @keyframes arrive { from { opacity: 0; transform: translateY(9px); } }
 .profile { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .46fr); align-items: center; gap: clamp(1.25rem, 4vw, 3.25rem); padding: clamp(1.15rem, 3.75vw, 2.75rem); border: 1px solid var(--line); border-radius: clamp(1.3rem, 3vw, 2.4rem); background: linear-gradient(114deg, #fff 38%, #edf7fc 70%, #d7edf6); overflow: hidden; }
 #page-home { padding-top: clamp(1.25rem, 3vw, 2.5rem); }
-.profile:has(.portrait[hidden]) { grid-template-columns: 1fr; }
+.profile:has(.portrait[hidden]):has(.profile-links[hidden]) { grid-template-columns: 1fr; }
 .profile-copy { container-type: inline-size; }
 h1 { font: 600 clamp(2.5rem, 6.8vw, 5.4rem)/1 var(--display); letter-spacing: -.035em; }
 .profile h1 { margin-bottom: .65rem; font-size: clamp(1rem, 6.65cqi, 2.85rem); line-height: 1.08; white-space: nowrap; }
@@ -58,9 +58,16 @@ h1 { font: 600 clamp(2.5rem, 6.8vw, 5.4rem)/1 var(--display); letter-spacing: -.
 .primary:hover { background: var(--ink); }
 .secondary { background: white; border-color: var(--line); }
 .secondary:hover { background: #e2f2f8; }
-.portrait { position: relative; width: min(100%, 255px); justify-self: center; padding: .5rem; border: 1px solid #fff; border-radius: 49% 49% 1.4rem 1.4rem; background: #ffffffad; box-shadow: 0 20px 60px #07597620; transform: rotate(2.5deg); transition: transform .35s ease; }
+.profile-media { width: min(100%, 255px); justify-self: center; display: grid; justify-items: center; gap: .85rem; }
+.profile-media:has(.portrait[hidden]):has(.profile-links[hidden]) { display: none; }
+.portrait { position: relative; width: 100%; padding: .5rem; border: 1px solid #fff; border-radius: 49% 49% 1.4rem 1.4rem; background: #ffffffad; box-shadow: 0 20px 60px #07597620; transform: rotate(2.5deg); transition: transform .35s ease; }
 .portrait:hover { transform: rotate(0); }
 .portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 52%; border-radius: inherit; }
+.profile-links { display: flex; justify-content: center; flex-wrap: wrap; gap: .4rem; }
+.profile-link { display: grid; place-items: center; width: 36px; height: 36px; background: #fff; color: var(--strong); border: 1px solid var(--line); border-radius: 50%; transition: background .2s, transform .2s; }
+.profile-link:hover { background: #e2f2f8; transform: translateY(-2px); }
+.profile-link svg { width: 17px; height: 17px; fill: currentColor; }
+.profile-link .profile-icon-outline { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .news { margin-top: clamp(1.45rem, 3vw, 2.5rem); }
 .section-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
 .section-heading h2 { font: 600 clamp(1.75rem, 3.7vw, 2.8rem)/1.08 var(--display); }
@@ -169,7 +176,8 @@ footer.wrap { display: flex; justify-content: space-between; gap: 1rem; padding-
   .header-inner { gap: .55rem; }
   .header-inner nav { width: 100%; }
   .profile { grid-template-columns: 1fr; }
-  .portrait { grid-row: 1; width: 104px; justify-self: start; margin-left: .2rem; }
+  .profile-media { grid-row: 1; }
+  .portrait { width: 104px; }
   .news-list { grid-auto-columns: 88%; }
   .section-heading { flex-wrap: wrap; }
 }

@@ -17,7 +17,12 @@ export const profile = {
   currentWork: "I study how large language models reason across languages and how to improve their multilingual capabilities.",
   interests: ["Multilingual Reasoning", "Reinforcement Learning", "On-Policy Distillation", "LLM Agents"],
   photo: "portrait.jpg",
+  email: "ahelhady511@gmail.com",
+  instagram: "https://www.instagram.com/ahmed.bin.salem/",
   linkedin: "https://www.linkedin.com/in/aselhady/",
+  x: "https://x.com/ahsalem511",
+  scholar: "https://scholar.google.com/citations?user=9gk2mKsAAAAJ&hl=en",
+  github: "https://github.com/ahmedselhady",
 };
 
 export const experience = [
