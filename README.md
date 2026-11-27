@@ -8,7 +8,7 @@ Run `python3 -m http.server 8000` from the repository root and open [the local s
 
 ## Edit the content
 
-- [content.js](content.js) holds the profile, portrait path, collaboration link, experience in reverse chronological order, and the three note topics. Each note has a `title` and a short `text`.
+- [content.js](content.js) holds the profile, portrait path, collaboration link, experience in reverse chronological order, and the note topics. Each note has a `title`, a short `text`, and a `modified` date in `YYYY-MM-DD` format. Update that date when editing a note. The All tab collects every note, and each tab shows the most recently edited notes first.
 - [news.jsonl](news.jsonl) holds one update per line. Use `date` (prefer `YYYY-MM-DD` or `YYYY-MM`), `title`, and `description`. Optional fields are `kind`, `venue`, `url`, `image` (a site-relative path such as `blogs/photos/event.jpg` or an HTTPS image URL), and `imageAlt` (a short description for screen readers). Entries added through **News and talks** in Pages CMS are read from [news.json](news.json). Use **Card photo** to add an image there.
 - [blogs/photos/index.json](blogs/photos/index.json) lists the gallery images. Each entry uses `image` and supports `caption`, optional `location`, and `medium` (`photo` or `drawing`). Existing entries without a medium are treated as photos.
 

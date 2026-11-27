@@ -7,9 +7,9 @@
   <title>Ahmed Elhady</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site.css">
-  <script type="module" src="site.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css?v=8">
+  <script type="module" src="site.js?v=8"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -28,10 +28,9 @@
     <section id="page-home" class="page" aria-labelledby="home-title">
       <article class="profile">
         <div class="profile-copy">
-          <p class="eyebrow">PhD researcher · Multilingual GenAI</p>
           <h1 id="home-title"></h1>
           <p class="affiliation" id="affiliation"></p>
-          <p class="bio" id="bio"></p>
+          <div class="bio" id="bio"></div>
           <h2 class="small-heading">Research interests</h2>
           <ul class="interests" id="interests"></ul>
           <div class="current-work">
@@ -51,6 +50,7 @@
         <div class="section-heading">
           <h2 id="news-title">News &amp; Talks</h2>
           <div class="carousel-controls" id="carousel-controls" hidden>
+            <button type="button" id="auto-scroll" aria-label="Pause automatic scrolling" aria-controls="news-list">Pause</button>
             <button type="button" id="previous" aria-label="Previous update" aria-controls="news-list"><span aria-hidden="true">‹</span></button>
             <button type="button" id="next" aria-label="Next update" aria-controls="news-list"><span aria-hidden="true">›</span></button>
           </div>
@@ -63,7 +63,16 @@
         <h1 id="experience-title">Experience</h1>
         <p>My work and education, starting with my most recent roles.</p>
       </div>
-      <ol class="trail" id="trail" aria-label="Education and work timeline"></ol>
+      <div class="experience-trails">
+        <section aria-labelledby="work-trail-title">
+          <h2 id="work-trail-title">Work</h2>
+          <ol class="trail" id="work-trail" aria-labelledby="work-trail-title"></ol>
+        </section>
+        <section aria-labelledby="education-trail-title">
+          <h2 id="education-trail-title">Education</h2>
+          <ol class="trail" id="education-trail" aria-labelledby="education-trail-title"></ol>
+        </section>
+      </div>
     </section>
     <section id="page-notes" class="page" aria-labelledby="notes-title" hidden>
       <div class="page-heading"><h1 id="notes-title">Contemplations</h1></div>
@@ -85,9 +94,14 @@
     </section>
   </main>
   <footer class="wrap"><span id="footer-name">Ahmed Elhady</span><a id="footer-link">LinkedIn</a></footer>
-  <dialog id="lightbox" aria-label="Artwork preview">
-    <button type="button" id="close-lightbox" aria-label="Close artwork preview">×</button>
+  <dialog class="viewer-dialog" id="lightbox" aria-label="Artwork preview">
+    <button class="viewer-close" type="button" aria-label="Close artwork preview">×</button>
     <figure><img id="lightbox-image" alt=""><figcaption id="lightbox-caption"></figcaption></figure>
+  </dialog>
+  <dialog class="viewer-dialog" id="note-viewer" aria-labelledby="note-viewer-title">
+    <button class="viewer-close" type="button" aria-label="Close note">×</button>
+    <h2 id="note-viewer-title"></h2>
+    <p id="note-viewer-text"></p>
   </dialog>
 </body>
 </html>
