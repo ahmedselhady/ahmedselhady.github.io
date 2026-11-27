@@ -1,28 +1,17 @@
-# Ahmed Elhady — academic website
+# Ahmed Elhady's personal site
 
-The public site is a static GitHub Pages site. Its editable content is stored in this repository; no publishing token is exposed in the browser.
+A static GitHub Pages site with Home, Experience, Contemplations, and Photography & Pencil Drawings.
 
-## Publish content from your phone
+## Preview locally
 
-1. Open [Pages CMS](https://pagescms.org/) and sign in with the GitHub account that owns this repository.
-2. Select `ahmedselhady.github.io` and the `main` branch. The repository's `.pages.yml` config exposes only its blog, photo, and news content.
-3. Use **Photography and tags** to upload an image from your phone, add a caption/location, and enter tags. Save; the image and its searchable metadata are committed to the repository.
-4. Use **Markdown blog files** to create a `.md` post. Then add the matching filename, title, date, summary, and tags under **Blog titles and tags**. The blog index displays title and tags, and the post body remains Markdown.
-5. Use **News and talks** to add an item to both the homepage feed and the dedicated tab.
+Run `python3 -m http.server 8000` from the repository root and open [the local site](http://localhost:8000). The local server lets the browser load the JavaScript modules and content files.
 
-The **New post** and **Add photo** buttons on the public site open the authenticated Pages CMS app in a new tab. In Pages CMS, choose this repository and its `main` branch, then use the matching content collection.
+## Edit the content
 
-Repository access is the publishing boundary: only people with write access to the GitHub repository can publish. Keep that access limited to your account. Pages CMS is a separate authenticated editor; the public site has no upload form or credentials.
+- [content.js](content.js) holds the profile, portrait path, collaboration link, experience in reverse chronological order, and the three note topics. Each note has a `title` and a short `text`.
+- [news.jsonl](news.jsonl) holds one update per line. Use `date` (prefer `YYYY-MM-DD` or `YYYY-MM`), `title`, and `description`. Optional fields are `kind`, `venue`, `url`, `image` (a site-relative path such as `blogs/photos/event.jpg` or an HTTPS image URL), and `imageAlt` (a short description for screen readers). Entries added through **News and talks** in Pages CMS are read from [news.json](news.json). Use **Card photo** to add an image there.
+- [blogs/photos/index.json](blogs/photos/index.json) lists the gallery images. Each entry uses `image` and supports `caption`, optional `location`, and `medium` (`photo` or `drawing`). Existing entries without a medium are treated as photos.
 
-## Local preview
+## Upload a photo or drawing
 
-Run `python3 -m http.server 8000` from the repository root and open `http://localhost:8000`. Fetch-based content does not load when opening the HTML file directly.
-
-## Content files
-
-- `index.html` — deployed page and design.
-- `news.json` — entries shown in the News & Talks tab.
-- `index.json` — blog list metadata (titles, dates, summaries, and tags).
-- `blogs/*.md` — Markdown article bodies.
-- `blogs/photos/index.json` and `blogs/photos/*` — photo metadata and image files.
-- `.pages.yml` — Pages CMS editor configuration.
+Use **Upload photo or drawing** on the gallery page to open [Pages CMS](https://app.pagescms.org/). Sign in with your GitHub account, select the website repository and publishing branch, and open **Photography and pencil drawings**. Add an entry, upload the image, choose its media type, and optionally add a caption and location. Saving commits the files to the repository so GitHub Pages can publish them. Repository write access is required.

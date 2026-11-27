@@ -1,6 +1,6 @@
 media:
   - name: images
-    label: Photography
+    label: Photography and pencil drawings
     input: blogs/photos
     output: /blogs/photos
     rename: safe
@@ -48,18 +48,23 @@ content:
         list: true
 
   - name: photo_index
-    label: Photography and tags
+    label: Photography and pencil drawings
     type: file
     path: blogs/photos/index.json
     format: json
     list: true
     fields:
       - name: image
-        label: Upload photo
+        label: Upload photo or drawing
         type: image
         required: true
         options:
           media: images
+      - name: medium
+        label: Media type (photo or drawing)
+        type: select
+        options:
+          values: [photo, drawing]
       - name: caption
         type: string
       - name: location
@@ -89,6 +94,14 @@ content:
         type: string
       - name: description
         type: text
+      - name: image
+        label: Card photo
+        type: image
+        options:
+          media: images
+      - name: imageAlt
+        label: Photo description for screen readers
+        type: string
       - name: url
         type: string
 

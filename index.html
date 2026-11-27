@@ -1,730 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name — PhD Researcher</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ahmed Elhady, PhD researcher in multilingual language models and reasoning.">
+  <title>Ahmed Elhady</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
-
-  <style>
-
-    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap');
-    :root { --paper:#f4f5ef; --surface:#fffefa; --ink:#1d3030; --muted:#526664; --faint:#879592; --line:#d7ded9; --acid:#dcebb3; --blue:#286c67; --orange:#bf4e38; --mono:'DM Mono',monospace; --sans:'Space Grotesk',Arial,sans-serif; --serif:'Source Serif 4',Georgia,serif; }
-    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
-    html { scroll-behavior:smooth; }
-    body { min-height:100vh; background:var(--paper); color:var(--ink); font:16px/1.65 var(--sans); }
-    a { color:var(--blue); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    img { max-width:100%; display:block; }
-    button,input,select { font:inherit; }
-    .site-wrapper { width:min(1440px,100%); margin:0 auto; padding:0 clamp(1rem,4vw,4rem); display:grid; grid-template-columns:minmax(190px,245px) minmax(0,1fr); column-gap:clamp(2rem,6vw,6rem); align-items:start; }
-    header { grid-column:1; grid-row:1; padding:clamp(2.5rem,7vw,5.8rem) 0 1.5rem; border:0; }
-    .header-inner { display:flex; flex-direction:column; align-items:stretch; gap:1.4rem; }
-    .header-identity::before { content:'RESEARCH PROFILE / 2026'; display:block; margin-bottom:1.5rem; color:var(--blue); font:500 .62rem/1 var(--mono); letter-spacing:.1em; }
-    .header-name { max-width:12ch; font:600 clamp(2.4rem,4vw,4rem)/.98 var(--sans); letter-spacing:-.07em; overflow-wrap:normal; word-break:normal; hyphens:none; }
-    .header-role { margin-top:.85rem; color:var(--muted); font:500 .67rem/1.6 var(--mono); letter-spacing:.035em; text-transform:uppercase; }
-    .header-role span { color:var(--orange); }
-    .header-links { display:flex; flex-wrap:wrap; gap:.55rem .85rem; }
-    .header-links a { display:flex; align-items:center; gap:.32rem; color:var(--muted); font:500 .64rem var(--mono); text-transform:uppercase; transition:color .2s,transform .2s; }
-    .header-links a:hover { color:var(--blue); transform:translateY(-2px); text-decoration:none; }
-    .header-links svg { width:13px; height:13px; fill:currentColor; }
-    nav { grid-column:1; grid-row:2; position:sticky; top:1.5rem; z-index:10; padding:.8rem 0 1rem 1rem; border-left:1px solid var(--line); background:transparent; }
-    .nav-inner { display:flex; flex-direction:column; gap:.18rem; }
-    .nav-inner::before { content:'INDEX'; display:block; margin:0 0 .65rem .75rem; color:var(--faint); font:500 .6rem var(--mono); letter-spacing:.16em; }
-    .tab-btn { position:relative; width:100%; padding:.65rem .75rem; border:0; background:none; color:var(--muted); text-align:left; text-transform:none; font:500 .88rem var(--sans); letter-spacing:0; cursor:pointer; transition:color .2s,background .2s,padding .2s; }
-    .tab-btn::before { content:''; position:absolute; left:-1.05rem; top:50%; width:3px; height:0; background:var(--orange); transform:translateY(-50%); transition:height .24s cubic-bezier(.2,.8,.2,1); }
-    .tab-btn:hover { padding-left:1rem; color:var(--ink); }
-    .tab-btn.active { color:var(--ink); background:linear-gradient(90deg,rgba(200,245,66,.38),transparent 82%); }
-    .tab-btn.active::before { height:70%; }
-    .tab-panel { display:none; grid-column:2; grid-row:1 / span 2; min-width:0; padding:clamp(2.6rem,7vw,5.8rem) 0 5rem; }
-    .tab-panel.active { display:block; animation:panelIn .5s cubic-bezier(.2,.8,.2,1) both; }
-    @keyframes panelIn { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
-    #tab-home { padding-top:clamp(2.5rem,8vw,7rem); }
-    .home-grid { position:relative; isolation:isolate; overflow:hidden; display:grid; grid-template-columns:minmax(0,1fr) minmax(150px,230px); gap:clamp(1.3rem,5vw,4rem); align-items:center; padding:clamp(1.4rem,4vw,3.4rem); background:var(--acid); border:1px solid #cbd8a1; }
-    .home-grid::before { content:'01'; position:absolute; z-index:-1; right:23%; bottom:-.31em; color:rgba(18,43,59,.075); font:700 clamp(8rem,22vw,19rem)/.8 var(--sans); letter-spacing:-.1em; pointer-events:none; }
-    .home-grid::after { content:''; position:absolute; z-index:-1; top:-38%; right:19%; width:clamp(150px,30vw,390px); aspect-ratio:1; border:1px solid rgba(18,43,59,.28); border-radius:50%; box-shadow:0 0 0 28px rgba(18,43,59,.035),0 0 0 56px rgba(18,43,59,.025); pointer-events:none; }
-    .home-intro p { max-width:58ch; margin-bottom:1.05rem; color:rgba(18,43,59,.84); font:400 clamp(.98rem,1.35vw,1.08rem)/1.72 var(--sans); }
-    .home-intro p:first-child { color:var(--ink); font:600 clamp(1.75rem,4vw,3.35rem)/1.04 var(--sans); letter-spacing:-.075em; }
-    .home-tags { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:1.5rem; }
-    .tag { display:inline-block; padding:.25rem .62rem; background:rgba(255,255,255,.58); color:var(--ink); border:1px solid rgba(18,43,59,.12); border-radius:2px; font:500 .61rem var(--mono); letter-spacing:0; }
-    .home-photo { position:relative; z-index:1; transform:rotate(2deg); transition:transform .35s cubic-bezier(.2,.8,.2,1); }
-    .home-photo:hover { transform:rotate(0) scale(1.025); }
-    .home-photo img { width:100%; aspect-ratio:4/5; object-fit:cover; border:5px solid var(--paper); box-shadow:0 14px 32px rgba(18,43,59,.2); filter:saturate(.82); }
-    .home-photo::after { content:'AH / ML'; position:absolute; right:-.8rem; bottom:-.8rem; z-index:2; padding:.4rem .55rem; background:var(--ink); color:white; font:500 .58rem var(--mono); letter-spacing:.08em; }
-    .home-experience { margin-top:3.2rem; padding-top:1.4rem; border-top:1px solid var(--line); }
-    .section-label { margin-bottom:1rem; color:var(--blue); font:500 .64rem var(--mono); letter-spacing:.12em; text-transform:uppercase; }
-    .exp-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
-    .exp-columns { min-width:max(100%,calc(var(--exp-count,4) * 9rem)); }
-    .exp-axis { position:relative; }
-    .exp-dot { background:var(--orange); box-shadow:0 0 0 5px rgba(191,78,56,.14); transition:transform .25s; }
-    .exp-col:hover .exp-dot { transform:scale(1.5); }
-    .exp-role { font-family:var(--sans); font-size:.82rem; }
-    .exp-period,.exp-org { font-family:var(--mono); font-size:.62rem; }
-    .panel-heading { display:flex; justify-content:space-between; align-items:end; gap:1rem; margin-bottom:2rem; padding-bottom:1.15rem; border-bottom:1px solid var(--line); }
-    .panel-heading h2 { color:var(--ink); font:600 clamp(2.5rem,6vw,5rem)/.95 var(--sans); letter-spacing:-.09em; }
-    .panel-kicker { color:var(--blue); font:500 .61rem var(--mono); letter-spacing:.1em; text-transform:uppercase; }
-    .pub-filter { display:flex; gap:.45rem; flex-wrap:wrap; margin-bottom:2rem; }
-    .filter-btn,.pub-btn { padding:.42rem .8rem; border:1px solid var(--line); border-radius:2px; background:transparent; color:var(--muted); font:500 .63rem var(--mono); text-transform:uppercase; cursor:pointer; transition:all .2s; }
-    .filter-btn:hover,.filter-btn.active { border-color:var(--ink); background:var(--ink); color:white; }
-    .pub-year { margin:0 0 .5rem; color:var(--blue); font:600 clamp(2.3rem,5vw,4rem)/1 var(--sans); letter-spacing:-.08em; -webkit-text-stroke:0; }
-    .pub-card { padding:1.25rem 1rem; border-bottom:1px solid var(--line); transition:background .2s,transform .2s; }
-    .pub-card { animation:contentRise .4s both; }
-    .pub-card:nth-child(2) { animation-delay:.04s; }
-    .pub-card:nth-child(3) { animation-delay:.08s; }
-    .pub-card:hover { background:#fff; transform:translateX(4px); }
-    .pub-title { margin-bottom:.3rem; color:var(--ink); font:600 clamp(1.08rem,2vw,1.45rem)/1.25 var(--sans); letter-spacing:-.04em; }
-    .pub-authors { color:var(--muted); font:400 .82rem/1.6 var(--serif); }
-    .pub-venue { margin:.4rem 0 .7rem; color:var(--blue); font:500 .62rem var(--mono); text-transform:uppercase; }
-    .pub-abstract { color:var(--muted); font:400 .92rem/1.72 var(--serif); }
-    .pub-card.expanded .pub-abstract { padding:.75rem 0; }
-    .pub-actions { display:flex; gap:.4rem; flex-wrap:wrap; }
-    .pub-btn { display:inline-block; text-decoration:none; }
-    .pub-btn:hover { border-color:var(--blue); background:var(--blue); color:white; text-decoration:none; }
-    .blog-grid { display:grid; gap:.65rem; }
-    .blog-card { display:grid; grid-template-columns:5rem minmax(0,1fr); gap:1.2rem; padding:1.25rem; background:var(--surface); border:1px solid var(--line); cursor:pointer; transition:transform .25s,box-shadow .25s,border-color .25s; }
-    .blog-card { animation:contentRise .42s both; }
-    .blog-card:nth-child(2) { animation-delay:.05s; }
-    .blog-card:nth-child(3) { animation-delay:.1s; }
-    .blog-card:hover { transform:translateY(-3px); border-color:var(--blue); box-shadow:0 12px 28px rgba(18,43,59,.08); }
-    .blog-date-col { text-align:left; }
-    .blog-date-day { color:var(--orange); font:600 2.25rem/.95 var(--sans); letter-spacing:-.1em; }
-    .blog-date-month,.blog-type { color:var(--muted); font:500 .6rem var(--mono); letter-spacing:.08em; text-transform:uppercase; }
-    .blog-type { margin-bottom:.35rem; color:var(--blue); }
-    .blog-title { margin-bottom:.4rem; font:600 clamp(1.15rem,2.4vw,1.7rem)/1.2 var(--sans); letter-spacing:-.05em; }
-    .blog-summary { color:var(--muted); font:400 .92rem/1.65 var(--serif); }
-    .blog-tags { display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.65rem; }
-    .article-view { display:none; }
-    .article-view.active { display:block; }
-    .blog-list-view.hidden { display:none; }
-    .back-btn { margin-bottom:1.5rem; border:0; background:none; color:var(--blue); font:500 .7rem var(--mono); cursor:pointer; }
-    .article-header { margin-bottom:2rem; padding-bottom:1.5rem; border-bottom:1px solid var(--line); }
-    .article-title { margin:.4rem 0; font:600 clamp(2rem,5vw,4.4rem)/1 var(--sans); letter-spacing:-.08em; }
-    .article-meta { color:var(--muted); font:500 .65rem var(--mono); }
-    .article-body { max-width:70ch; color:var(--ink); font:400 1.05rem/1.85 var(--serif); overflow-wrap:break-word; word-break:normal; }
-    .article-body[dir="rtl"] { margin-inline-start:auto; text-align:right; font-family:system-ui,sans-serif; }
-    .article-body h1,.article-body h2,.article-body h3 { margin:2rem 0 .75rem; font-family:var(--sans); letter-spacing:-.05em; }
-    .article-body p { margin-bottom:1.2rem; }
-    .article-body pre { max-width:100%; overflow:auto; padding:1rem; background:var(--ink); color:#eff7fb; }
-    .talk-card { display:grid; grid-template-columns:8rem minmax(0,1fr); gap:1rem; padding:1.2rem .8rem; border-bottom:1px solid var(--line); transition:background .2s; }
-    .talk-card { animation:contentRise .42s both; }
-    .talk-card:nth-child(2) { animation-delay:.06s; }
-    .talk-card:nth-child(3) { animation-delay:.12s; }
-    .talk-card:hover { background:#fff; }
-    .talk-date { color:var(--orange); font:500 .65rem var(--mono); }
-    .talk-title { font:600 1.15rem/1.3 var(--sans); letter-spacing:-.035em; }
-    .talk-meta { margin-top:.2rem; color:var(--blue); font:500 .63rem var(--mono); text-transform:uppercase; }
-    .news-text { margin-top:.4rem; color:var(--muted); font:400 .91rem/1.6 var(--serif); }
-    .photo-tools { display:flex; gap:.6rem; flex-wrap:wrap; margin-bottom:1.25rem; }
-    input,select { min-height:44px; padding:.65rem .8rem; border:1px solid var(--line); border-radius:2px; background:#fff; color:var(--ink); font:500 .8rem var(--sans); }
-    .photo-search { flex:1 1 220px; min-width:0; }
-    input:focus,select:focus { outline:2px solid var(--blue); outline-offset:2px; }
-    .photo-grid { columns:3 210px; column-gap:.9rem; }
-    .photo-item { position:relative; display:inline-block; width:100%; margin:0 0 .9rem; padding:.4rem; background:#fff; border:1px solid var(--line); break-inside:avoid; cursor:zoom-in; transition:transform .3s,box-shadow .3s; }
-    .photo-item:hover { z-index:2; transform:translateY(-5px) rotate(-.6deg); box-shadow:0 16px 32px rgba(18,43,59,.17); }
-    .photo-item img { width:100%; border:0; transition:filter .3s; }
-    .photo-item:hover img { filter:saturate(1.08); }
-    .photo-caption { padding:.55rem .25rem .2rem; color:var(--ink); font:500 .66rem var(--mono); }
-    .photo-tags { display:flex; flex-wrap:wrap; gap:.3rem; padding:.15rem .25rem .3rem; }
-    .photo-tag { color:var(--blue); font:500 .59rem var(--mono); }
-    .photo-subtitle { margin-top:1rem; color:var(--muted); font:400 .9rem var(--serif); }
-    .floating-add { position:fixed; right:clamp(1rem,3vw,2rem); bottom:calc(1.2rem + env(safe-area-inset-bottom)); z-index:90; display:inline-flex; align-items:center; gap:.55rem; min-height:50px; padding:.72rem 1rem .72rem .8rem; background:var(--ink); color:#fff; border:1px solid var(--ink); box-shadow:0 8px 22px rgba(29,48,48,.2); font:500 .7rem var(--mono); text-transform:uppercase; letter-spacing:.06em; transition:transform .2s,background .2s,color .2s,box-shadow .2s; }
-    .floating-add:hover { transform:translateY(-3px); background:var(--acid); color:var(--ink); box-shadow:0 12px 28px rgba(29,48,48,.25); text-decoration:none; }
-    .floating-add svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:square; }
-    .lightbox { display:none; position:fixed; inset:0; z-index:1000; align-items:center; justify-content:center; background:rgba(9,28,41,.94); cursor:zoom-out; }
-    .lightbox.open { display:flex; animation:fadeIn .22s ease; }
-    .lightbox img { max-width:90vw; max-height:84vh; object-fit:contain; box-shadow:0 30px 80px #0008; }
-    .lightbox-caption { position:fixed; bottom:1.4rem; left:50%; transform:translateX(-50%); color:#fff; font:500 .68rem var(--mono); text-align:center; }
-    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-    @keyframes contentRise { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
-    footer { grid-column:1/-1; display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; margin-top:1rem; padding:1.3rem 0 2rem; border-top:1px solid var(--line); }
-    .footer-note { color:var(--muted); font:500 .6rem var(--mono); }
-    @media(max-width:760px) {
-      .site-wrapper { grid-template-columns:minmax(0,1fr); column-gap:0; }
-      header { grid-column:1; grid-row:1; padding:2.2rem 0 1.3rem; }
-      .header-inner { flex-direction:row; align-items:flex-end; justify-content:space-between; gap:1rem; }
-      .header-identity::before { margin-bottom:.8rem; }
-      .header-name { max-width:14ch; font-size:clamp(2rem,7vw,3.15rem); }
-      .header-links { max-width:245px; justify-content:flex-end; }
-      nav { grid-column:1; grid-row:2; top:0; margin:0 calc(clamp(1rem,4vw,4rem)*-1); padding:.35rem clamp(1rem,4vw,4rem) 0; border-left:0; border-block:1px solid var(--line); background:rgba(244,245,239,.97); }
-      .nav-inner { flex-direction:row; gap:.1rem; overflow-x:auto; }
-      .nav-inner::before { display:none; }
-      .tab-btn { width:auto; flex:0 0 auto; padding:.8rem .8rem; white-space:nowrap; font-size:.76rem; }
-      .tab-btn:hover { padding-left:.8rem; }
-      .tab-btn::before { display:none; }
-      .tab-btn.active { background:linear-gradient(180deg,transparent 68%,rgba(220,235,179,.72) 68%); }
-      .tab-panel { grid-column:1; grid-row:3; padding:2.2rem 0 3.5rem; }
-      #tab-home { padding-top:2rem; }
-      footer { grid-column:1; }
-    }
-    @media(max-width:600px) {
-      .header-inner { align-items:flex-start; flex-direction:column; }
-      .header-links { max-width:none; justify-content:flex-start; }
-    }
-    @media(max-width:520px) {
-      .site-wrapper { padding-inline:1rem; }
-      .header-links { max-width:none; justify-content:flex-start; }
-      nav { margin-inline:-1rem; padding-inline:1rem; }
-      .tab-btn { padding:.75rem .62rem; font-size:.68rem; }
-      .home-grid { grid-template-columns:1fr; gap:1rem; padding:1rem; }
-      .home-grid::before { right:3%; font-size:11rem; }
-      .home-grid::after { right:6%; top:6%; width:36vw; }
-      .home-photo { order:-1; width:min(48vw,190px); }
-      .home-intro p:first-child { font-size:2rem; }
-      .blog-card { grid-template-columns:3.3rem minmax(0,1fr); gap:.7rem; padding:.9rem; }
-      .blog-date-day { font-size:1.7rem; }
-      .talk-card { grid-template-columns:1fr; gap:.25rem; }
-      .panel-heading { align-items:flex-start; flex-direction:column; }
-      .photo-grid { columns:2 135px; column-gap:.55rem; }
-      .floating-add { right:1rem; bottom:calc(1rem + env(safe-area-inset-bottom)); min-height:48px; }
-      footer { flex-direction:column; }
-    }
-    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; } }
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <script type="module" src="site.js"></script>
 </head>
 <body>
-
-<!-- ============================================================
-     CONFIGURATION — Edit the JS config object below
-     ============================================================ -->
-<script>
-const CONFIG = {
-  // ── Personal Info ──────────────────────────────────────────────
-  name:        "Ahmed Salem Mohamed Elhady",
-  role:        "PhD Researcher · Multilingual GenAI",
-  institution: "Hitz Lab @ University of the Basque Country",
-  email:       "ahelhady511@gmail.com",
-
-  // ── Social links (set to null to hide) ────────────────────────
-  links: {
-    scholar:  "https://scholar.google.com/citations?user=9gk2mKsAAAAJ&hl=en",
-    github:   "https://github.com/ahmedselhady",
-    twitter:  "https://x.com/a_s_elhady97",
-    linkedin: "https://www.linkedin.com/in/aselhady/",
-    cv:       "cv.pdf",
-  },
-
-  // ── Home page ──────────────────────────────────────────────────
-  intro: [
-    // First paragraph is displayed in italic serif. Rest are normal.
-    "Hi! I'm Salem...",
-    "I am a PhD Research Student at the University of the Basque Country (UPV/EHU) under the supervision of Mikel Artetxe and Eneko Agirre.",
-    "I am incoming Research Intern at Cohere Labs, working with Kelly Marchisio and Nithya Govindarajan.",
-    "I am working on the analysis and improvement of multi-lingual capabilities in Large Language Models, with a focus on the Intersection of Reasoning and Multilingualism.",
-    "Before embarking on my PhD, I worked as an Applied Data Scientist at Microsoft (Bing) Trust and Safety Alignment team. Before that, I worked as an Applied Data Scientist at Implicit-ai (formerly Agolo), a Microsoft-backed startup."
-
-  ],
-  researchTags: [
-    "Multilingual LLMs", "Reasoning", "Cross-lingual Transfer", "Multilingual Reasoning",
-  ],
-  // Home portrait — path relative to index.html (README default: photo.jpg)
-  profilePhoto: "pp2.png",
-
-  // ── Work experience (home horizontal timeline, oldest → newest, left → right) ──
-  experience: [
-  { period: "— 2020", role: "BSc - Computer Engineering", org: "Cairo University, Egypt" },
-    { period: "2020 — 2022", role: "Applied Data Scientist", org: "Implicit-ai (Agolo)" },
-    { period: "2022 — 2024", role: "Applied Data Scientist", org: "Microsoft · Bing Trust & Safety" },
-    { period: "2024 — Present", role: "PhD Research Student", org: "UPV/EHU · Hitz Lab" },
-    { period: "2026", role: "Research Intern", org: "Cohere Labs" },
-  ],
-
-  // ── Publications ──────────────────────────────────────────────
-  // type: "conference" | "journal" | "workshop" | "preprint"
-  publications: [
-    {
-      year: 2025,
-      type: "conference",
-      title: "Emergent Abilities of Large Language Models under Continued Pretraining for Language Adaptation",
-      authors: ["Ahmed Elhady", "Eneko Agirre", "Mikel Artetxe"],
-      venue: "ACL 2025",
-      abstract: "Continued pretraining (CPT) is a popular approach to adapt existing large language models (LLMs) to new languages. When doing so, it is common practice to include a portion of English data in the mixture, but its role has not been carefully studied to date. In this work, we show that including English does not impact validation perplexity, yet it is critical for the emergence of downstream capabilities in the target language. We introduce a language-agnostic benchmark for in-context learning (ICL), which reveals catastrophic forgetting early on CPT when English is not included. This in turn damages the ability of the model to generalize to downstream prompts as measured by perplexity, even if it does not manifest in terms of accuracy until later in training, and can be tied to a big shift in the model parameters. Based on these insights, we introduce curriculum learning and exponential moving average (EMA) of weights as effective alternatives to mitigate the need for English. All in all, our work sheds light into the dynamics by which emergent abilities arise when doing CPT for language adaptation, and can serve as a foundation to design more effective methods in the future.",
-      links: { paper: "https://aclanthology.org/2025.acl-long.1547/", code: null, twitter: "https://x.com/ahsalem511/status/1930942337271619747?s=20", poster: null },
-    },
-    {
-      year: 2025,
-      type: "conference",
-      title: "WiCkeD: A Simple Method to Make Multiple Choice Benchmarks More Challenging for Language Adaptation",
-      authors: ["Ahmed Elhady", "Eneko Agirre", "Mikel Artetxe"],
-      venue: "ACL 2025",
-      abstract: "We introduce WiCkeD, a simple method to increase the complexity of existing multiple-choice benchmarks by randomly replacing a choice with “None of the above”, a method often used in educational tests. We show that WiCkeD can be automatically applied to any existing benchmark, making it more challenging. We apply WiCkeD to 6 popular benchmarks and use it to evaluate 18 open-weight LLMs. The performance of the models drops12.1 points on average with respect to the original versions of the datasets. When using chainof-thought on 3 MMLU datasets, the performance drop for the WiCkeD variant is similar to the one observed when using the LLMs directly, showing that WiCkeD is also challenging for models with enhanced reasoning abilities. WiCkeD also uncovers that some models are more sensitive to the extra reasoning required, providing additional information with respect to the original benchmarks.We relase our code and data at github.com/anonymized.",
-      links: { paper: "https://aclanthology.org/2025.acl-short.94/", "twitter": "https://x.com/ahsalem511/status/1894716087251456157", slides: null, poster: null },
-    },
-    {
-      year: 2024,
-      type: "conference",
-      title: "Improving Factuality in Clinical Abstractive Multi-Document Summarization through Guided Continued Pre-training",
-      authors: ["Ahmed Elhady", "Khaled Elsayed",  "Eneko Agirre", "Mikel Artetxe"],
-      venue: "NAACL 2024",
-      abstract: "Factual accuracy is an important property of neural abstractive summarization models, especially in fact-critical domains such as the clinical literature. In this work, we introduce a guided continued pre-training stage for encoder-decoder models that improves their understanding of the factual attributes of documents, which is followed by supervised fine-tuning on summarization. Our approach extends the pre-training recipe of BART to incorporate 3 additional objectives based on PICO spans, which capture the population, intervention, comparison, and outcomes related to a clinical study. Experiments on multi-document summarization in the clinical domain demonstrate that our approach is competitive with prior work, improving the quality and factuality of the summaries and achieving the best-published results in factual accuracy on the MSLR task.",
-      links: { paper: "https://aclanthology.org/2024.naacl-short.66/", code: null,  poster: null },
-    },
-  ],
-
-  // ── Blog posts — loaded from blogs/index.json ─────────────────
-  // Do not add posts here. Edit blogs/index.json and add .md files instead.
-
-  // ── Personal / Photography ────────────────────────────────────
-  bio: [
-    "I am a family man and a father of a beautiful girl, around who I spend most of my off-work time. I recenty learned to cook with her, and it's become a hobby of mine.",
-    "I am a mixture of cinophile, hiker, biker, and weight lifter.",
-    "If I am not at my desk, you will find me biking by the beach, or at home binge watching some series when it is raining.",
-    "Photography is my way of capturing non-written beaty of the world."
-  ],
-  personalPhoto: "loly.jpg",  // Photo shown beside your bio — place file in same folder
-
-  // Photos loaded from blogs/photos/index.json — edit that file, not here.
-};
-</script>
-
-<!-- ============================================================
-     SITE MARKUP
-     ============================================================ -->
-<div class="site-wrapper">
-
-  <header>
-    <div class="header-inner">
-      <div class="header-identity">
-        <h1 class="header-name" id="site-name"></h1>
-        <div class="header-role" id="site-role"></div>
-      </div>
-      <div class="header-links" id="header-links"></div>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#home"><span class="monogram" aria-hidden="true">AE</span><span id="brand-name">Ahmed Elhady</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#home" aria-current="page">Home</a>
+        <a href="#experience">Experience</a>
+        <a href="#notes">Contemplations</a>
+        <a href="#photography"><span class="gallery-full">Photography &amp; Pencil Drawings</span><span class="gallery-short" aria-hidden="true">Gallery</span></a>
+      </nav>
     </div>
   </header>
-
-  <nav>
-    <div class="nav-inner">
-      <button class="tab-btn active" data-tab="home" aria-current="page">Home</button>
-      <button class="tab-btn" data-tab="publications">Publications</button>
-      <button class="tab-btn" data-tab="news">News & Talks</button>
-      <button class="tab-btn" data-tab="blog">Blog & Thoughts</button>
-      <button class="tab-btn" data-tab="photography">Photography</button>
-      <button class="tab-btn" data-tab="personal">About</button>
-    </div>
-  </nav>
-
-  <!-- HOME -->
-  <div class="tab-panel active" id="tab-home">
-    <div class="home-grid">
-      <div class="home-intro">
-        <div id="intro-text"></div>
-        <div class="home-tags" id="research-tags"></div>
-      </div>
-      <div class="home-photo" id="home-photo">
-        <img id="profile-photo" alt="Profile photo" onerror="(function(img){ var col=img.closest('.home-photo'), grid=img.closest('.home-grid'); col.style.display='none'; if(grid) grid.style.gridTemplateColumns='1fr'; })(this)">
-      </div>
-    </div>
-    <div class="home-experience">
-      <div class="section-label">Experience</div>
-      <div class="exp-scroll">
-        <div class="exp-columns" id="exp-timeline"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="tab-panel" id="tab-news">
-    <div class="panel-heading"><div><div class="panel-kicker">Field notes / 01</div><h2>News & Talks</h2></div></div>
-    <div id="talk-list" class="news-list"></div>
-  </div>
-
-  <!-- PUBLICATIONS -->
-  <div class="tab-panel" id="tab-publications">
-    <div class="pub-filter" id="pub-filter">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="conference">Conference</button>
-      <button class="filter-btn" data-filter="journal">Journal</button>
-      <button class="filter-btn" data-filter="workshop">Workshop</button>
-      <button class="filter-btn" data-filter="preprint">Preprint</button>
-    </div>
-    <div id="pub-list"></div>
-  </div>
-
-  <div class="tab-panel" id="tab-photography">
-    <div class="panel-heading"><div><div class="panel-kicker">Visual index / 02</div><h2>Photography</h2></div><div class="panel-kicker">Browse by tag</div></div>
-    <div class="photo-tools"><input class="photo-search" id="photo-search" type="search" placeholder="Search tags, places, captions…" aria-label="Search photos by tag, place, or caption"><select id="photo-tag-filter" aria-label="Filter photos by tag"><option value="">All tags</option></select></div>
-    <div class="photo-grid" id="photo-grid"></div>
-    <p class="photo-subtitle" id="photo-empty" hidden>No photographs match that search.</p>
-    <a class="floating-add" href="https://app.pagescms.org/" target="_blank" rel="noopener" aria-label="Open Pages CMS to upload a photo" title="Upload a photo">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span>Add photo</span>
-    </a>
-  </div>
-
-  <!-- BLOG -->
-  <div class="tab-panel" id="tab-blog">
-    <a class="floating-add" href="https://app.pagescms.org/" target="_blank" rel="noopener" aria-label="Open Pages CMS to write a Markdown blog post" title="Write a blog post">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span>New post</span>
-    </a>
-    <div class="blog-list-view" id="blog-list-view">
-      <div id="blog-list"></div>
-    </div>
-    <div class="article-view" id="article-view">
-      <button class="back-btn" id="back-btn">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
-        Back to all posts
-      </button>
-      <div class="article-header">
-        <div class="article-type" id="article-type"></div>
-        <h1 class="article-title" id="article-title"></h1>
-        <div class="article-meta" id="article-meta"></div>
-      </div>
-      <div class="article-body" id="article-body"></div>
-    </div>
-  </div>
-
-  <!-- PERSONAL -->
-  <div class="tab-panel" id="tab-personal">
-    <div class="personal-top">
-      <div class="personal-bio" id="personal-bio"></div>
-      <div class="personal-photo-col">
-        <img id="personal-photo" alt="Personal photo" onerror="this.parentElement.style.display='none'">
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <div class="footer-note" id="footer-note"></div>
-    <div class="footer-note">Built with plain HTML · Hosted on GitHub Pages</div>
-  </footer>
-
-</div>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-  <img id="lightbox-img" alt="">
-  <div class="lightbox-caption" id="lightbox-caption"></div>
-</div>
-
-<script>
-// ============================================================
-// RENDER ENGINE — no need to edit below this line
-// ============================================================
-
-document.addEventListener('DOMContentLoaded', () => {
-  const C = CONFIG;
-
-  // ── Helpers ─────────────────────────────────────────────────
-  function el(id) { return document.getElementById(id); }
-  function fmt(dateStr) {
-    const d = new Date(dateStr);
-    return { day: d.getDate(), month: d.toLocaleString('en', { month: 'short' }), full: d.toLocaleDateString('en', { year: 'numeric', month: 'long', day: 'numeric' }) };
-  }
-
-  // ── Header ──────────────────────────────────────────────────
-  document.title = C.name + " — PhD Researcher";
-  el('site-name').textContent = C.name;
-  el('site-role').innerHTML = C.role.replace('·', '<span>·</span>');
-
-  const linkDefs = [
-    { key: 'scholar', label: 'Scholar', icon: '<svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>' },
-    { key: 'github',  label: 'GitHub',  icon: '<svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>' },
-    { key: 'twitter', label: 'Twitter', icon: '<svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>' },
-    { key: 'linkedin',label: 'LinkedIn',icon: '<svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>' },
-    { key: 'cv',      label: 'CV / Résumé', icon: '<svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6z"/></svg>' },
-  ];
-  const linksHTML = linkDefs
-    .filter(l => C.links[l.key])
-    .map(l => `<a href="${C.links[l.key]}" target="_blank" rel="noopener">${l.icon}${l.label}</a>`)
-    .join('');
-  el('header-links').innerHTML = linksHTML;
-
-  // ── Home ────────────────────────────────────────────────────
-  const homeGrid = document.querySelector('.home-grid');
-  if (C.profilePhoto) {
-    el('profile-photo').src = C.profilePhoto;
-  } else {
-    el('home-photo').style.display = 'none';
-    if (homeGrid) homeGrid.style.gridTemplateColumns = '1fr';
-  }
-  el('intro-text').innerHTML = C.intro.map((p, i) => `<p>${p}</p>`).join('');
-  el('research-tags').innerHTML = C.researchTags.map(t => `<span class="tag">${t}</span>`).join('');
-
-  const exp = C.experience || [];
-  const expRoot = el('exp-timeline');
-  if (expRoot) {
-    expRoot.style.setProperty('--exp-count', String(Math.max(exp.length, 1)));
-    function expCard(e) {
-      return `<div class="exp-card"><div class="exp-period">${e.period}</div><div class="exp-role">${e.role}</div><div class="exp-org">${e.org}</div></div>`;
-    }
-    expRoot.innerHTML = exp.map((e, i) => {
-      const top = i % 2 === 0 ? expCard(e) : '';
-      const bot = i % 2 === 1 ? expCard(e) : '';
-      return `
-        <div class="exp-col">
-          <div class="exp-slab exp-slab-top">${top}</div>
-          <div class="exp-axis">
-            <span class="exp-hline exp-hline-left"></span>
-            <span class="exp-dot"></span>
-            <span class="exp-hline exp-hline-right"></span>
+  <main class="wrap" id="main" tabindex="-1">
+    <section id="page-home" class="page" aria-labelledby="home-title">
+      <article class="profile">
+        <div class="profile-copy">
+          <p class="eyebrow">PhD researcher · Multilingual GenAI</p>
+          <h1 id="home-title"></h1>
+          <p class="affiliation" id="affiliation"></p>
+          <p class="bio" id="bio"></p>
+          <h2 class="small-heading">Research interests</h2>
+          <ul class="interests" id="interests"></ul>
+          <div class="current-work">
+            <span class="current-dot" aria-hidden="true"></span>
+            <div>
+              <h2 class="small-heading">What I’m currently doing</h2>
+              <p id="current-work"></p>
+            </div>
           </div>
-          <div class="exp-slab exp-slab-bot">${bot}</div>
-        </div>`;
-    }).join('');
-  }
-
-  // ── Publications ────────────────────────────────────────────
-  function renderPubs(filter) {
-    const pubs = filter === 'all' ? C.publications : C.publications.filter(p => p.type === filter);
-    const years = [...new Set(pubs.map(p => p.year))].sort((a, b) => b - a);
-
-    el('pub-list').innerHTML = years.map(y => {
-      const yPubs = pubs.filter(p => p.year === y);
-      return `
-        <div class="pub-year-group" data-year="${y}">
-          <div class="pub-year">${y}</div>
-          ${yPubs.map((pub, i) => {
-            const authors = pub.authors.map(a =>
-              a === C.name ? `<span class="you">${a}</span>` : a
-            ).join(', ');
-            const links = Object.entries(pub.links)
-              .filter(([k, v]) => v)
-              .map(([k, v]) => `<a href="${v}" class="pub-btn" target="_blank">${k}</a>`)
-              .join('');
-            return `
-              <div class="pub-card" data-type="${pub.type}">
-                <div class="pub-title">${pub.title}</div>
-                <div class="pub-authors">${authors}</div>
-                <div class="pub-venue">${pub.venue}</div>
-                <div class="pub-abstract">${pub.abstract}</div>
-                <div class="pub-actions">
-                  ${links}
-                  ${pub.abstract ? `<button class="pub-btn abstract-toggle">abstract ↓</button>` : ''}
-                </div>
-              </div>`;
-          }).join('')}
-        </div>`;
-    }).join('') || '<p style="color:var(--ink-muted); font-style:italic;">No publications of this type yet.</p>';
-
-    // Abstract toggles
-    el('pub-list').querySelectorAll('.abstract-toggle').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const card = btn.closest('.pub-card');
-        card.classList.toggle('expanded');
-        btn.textContent = card.classList.contains('expanded') ? 'abstract ↑' : 'abstract ↓';
-      });
-    });
-  }
-
-  renderPubs('all');
-
-  el('pub-filter').addEventListener('click', e => {
-    const btn = e.target.closest('.filter-btn');
-    if (!btn) return;
-    el('pub-filter').querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderPubs(btn.dataset.filter);
-  });
-
-  // ── Markdown parser (no dependencies) ───────────────────────
-  function parseMarkdown(md) {
-    // Escape HTML in code blocks first, then process everything else
-    let html = md
-      // Fenced code blocks
-      .replace(/```(\w*)\n([\s\S]*?)```/g, (_, lang, code) =>
-        `<pre><code class="language-${lang}">${code.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</code></pre>`)
-      // Inline code
-      .replace(/`([^`]+)`/g, '<code>$1</code>')
-      // Images  ![alt](src)
-      .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" style="max-width:100%;margin:1.5rem 0;">')
-      // Links  [text](url)
-      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
-      // Headings
-      .replace(/^#### (.+)$/gm, '<h4>$1</h4>')
-      .replace(/^### (.+)$/gm,  '<h3>$1</h3>')
-      .replace(/^## (.+)$/gm,   '<h2>$1</h2>')
-      .replace(/^# (.+)$/gm,    '<h1>$1</h1>')
-      // Bold & italic
-      .replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
-      .replace(/\*\*(.+?)\*\*/g,     '<strong>$1</strong>')
-      .replace(/\*(.+?)\*/g,         '<em>$1</em>')
-      // Blockquotes
-      .replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>')
-      // Horizontal rules
-      .replace(/^---$/gm, '<hr>')
-      // Unordered lists
-      .replace(/((?:^[-*] .+\n?)+)/gm, match =>
-        '<ul>' + match.replace(/^[-*] (.+)$/gm, '<li>$1</li>') + '</ul>')
-      // Ordered lists
-      .replace(/((?:^\d+\. .+\n?)+)/gm, match =>
-        '<ol>' + match.replace(/^\d+\. (.+)$/gm, '<li>$1</li>') + '</ol>')
-      // Paragraphs: wrap non-tagged lines
-      .split(/\n{2,}/)
-      .map(block => {
-        block = block.trim();
-        if (!block) return '';
-        if (/^<(h[1-4]|ul|ol|pre|blockquote|hr|img)/.test(block)) return block;
-        return `<p>${block.replace(/\n/g, ' ')}</p>`;
-      })
-      .join('\n');
-    return html;
-  }
-
-  // ── Blog ────────────────────────────────────────────────────
-  let blogPosts = [];
-
-  function renderBlogList(posts) {
-    if (!posts.length) {
-      el('blog-list').innerHTML = '<p style="color:var(--ink-muted);font-style:italic;">No posts yet.</p>';
-      return;
-    }
-    el('blog-list').innerHTML = posts.map(post => {
-      const d = fmt(post.date);
-      return `
-        <div class="blog-card" data-file="${post.file}">
-          <div class="blog-date-col">
-            <div class="blog-date-day">${d.day}</div>
-            <div class="blog-date-month">${d.month}</div>
+          <a class="button primary" id="collaboration">Contact for collaboration</a>
+        </div>
+        <figure class="portrait" id="portrait" hidden>
+          <img id="profile-image" width="704" height="1472" alt="">
+        </figure>
+      </article>
+      <section class="news" aria-labelledby="news-title">
+        <div class="section-heading">
+          <h2 id="news-title">News &amp; Talks</h2>
+          <div class="carousel-controls" id="carousel-controls" hidden>
+            <button type="button" id="previous" aria-label="Previous update" aria-controls="news-list"><span aria-hidden="true">‹</span></button>
+            <button type="button" id="next" aria-label="Next update" aria-controls="news-list"><span aria-hidden="true">›</span></button>
           </div>
-          <div>
-            <div class="blog-type">${post.type || 'note'}</div>
-      <div class="blog-title" dir="${/[\u0600-\u06FF]/.test(post.title || '') ? 'rtl' : 'ltr'}">${post.title}</div>
-            <div class="blog-summary">${post.summary}</div>
-            <div class="blog-tags">${(post.tags||[]).map(t => `<span class="tag">${t}</span>`).join('')}</div>
-          </div>
-        </div>`;
-    }).join('');
-  }
-
-  async function openPost(post) {
-    el('article-type').textContent = post.type || 'note';
-    el('article-title').textContent = post.title;
-    el('article-body').dir = /[\u0600-\u06FF]/.test(post.title || '') ? 'rtl' : 'ltr';
-    const d = fmt(post.date);
-    el('article-meta').textContent = d.full + '  ·  ' + (post.tags||[]).join(', ');
-    el('article-body').innerHTML = '<p style="color:var(--ink-faint);font-style:italic;">Loading…</p>';
-    el('blog-list-view').classList.add('hidden');
-    el('article-view').classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    try {
-      const resp = await fetch('blogs/' + post.file);
-      if (!resp.ok) throw new Error('Not found');
-      const md = await resp.text();
-      el('article-body').dir = /[\u0600-\u06FF]/.test(md) ? 'rtl' : 'ltr';
-      el('article-body').innerHTML = parseMarkdown(md);
-    } catch(e) {
-      el('article-body').innerHTML = '<p style="color:var(--ink-muted);">Could not load post. Make sure <code>blogs/' + post.file + '</code> exists.</p>';
-    }
-  }
-
-  el('blog-list').addEventListener('click', e => {
-    const card = e.target.closest('.blog-card');
-    if (!card) return;
-    const post = blogPosts.find(p => p.file === card.dataset.file);
-    if (post) openPost(post);
-  });
-
-  el('back-btn').addEventListener('click', () => {
-    el('article-view').classList.remove('active');
-    el('blog-list-view').classList.remove('hidden');
-  });
-
-  // Load blog index
-  fetch('index.json')
-    .then(r => r.ok ? r.json() : [])
-    .then(posts => { blogPosts = posts; renderBlogList(posts); })
-    .catch(() => renderBlogList([]));
-
-  // ── Personal ────────────────────────────────────────────────
-  el('personal-bio').innerHTML = C.bio.map(p => `<p>${p}</p>`).join('');
-  el('personal-photo').src = C.personalPhoto;
-  el('footer-note').textContent = `© ${new Date().getFullYear()} ${C.name}`;
-
-  // Load photos index
-  function renderPhotos(photos) {
-    const query = (el('photo-search').value || '').trim().toLocaleLowerCase();
-    const selectedTag = el('photo-tag-filter').value;
-    const filtered = photos.map((p, i) => ({...p, _idx:i})).filter(p => {
-      const tags = p.tags || [];
-      const haystack = [p.caption, p.location, ...tags].join(' ').toLocaleLowerCase();
-      return (!query || haystack.includes(query)) && (!selectedTag || tags.includes(selectedTag));
-    });
-    el('photo-empty').hidden = filtered.length > 0;
-    el('photo-grid').innerHTML = filtered.map(p =>
-      `<div class="photo-item" data-idx="${p._idx}">
-        <img src="${p.image || ('blogs/photos/' + p.file)}" alt="${p.caption}" loading="lazy">
-        <div class="photo-caption">${p.caption}</div>
-        <div class="photo-tags">${(p.tags || []).map(t => `<span class="photo-tag">#${t}</span>`).join('')}</div>
-      </div>`
-    ).join('');
-  }
-
-  let photoList = [];
-  fetch('blogs/photos/index.json')
-    .then(r => r.ok ? r.json() : [])
-    .then(photos => {
-      photoList = photos;
-      const tags = [...new Set(photos.flatMap(p => p.tags || []))].sort((a,b) => a.localeCompare(b));
-      el('photo-tag-filter').innerHTML = '<option value="">All tags</option>' + tags.map(t => `<option value="${t}">${t}</option>`).join('');
-      renderPhotos(photos);
-    })
-    .catch(() => {});
-  el('photo-search').addEventListener('input', () => renderPhotos(photoList));
-  el('photo-tag-filter').addEventListener('change', () => renderPhotos(photoList));
-
-  fetch('news.json').then(r => r.ok ? r.json() : null).then(items => {
-    if (!items) return;
-    el('talk-list').innerHTML = items.map(n => `<article class="talk-card"><div class="talk-date">${n.date}</div><div><div class="talk-title">${n.title}</div><div class="talk-meta">${n.kind || 'News'}${n.venue ? ' · ' + n.venue : ''}</div>${n.description ? `<p class="news-text">${n.description}</p>` : ''}${n.url ? `<a href="${n.url}" target="_blank" rel="noopener">Details ↗</a>` : ''}</div></article>`).join('');
-  }).catch(() => {});
-
-  // ── Lightbox ────────────────────────────────────────────────
-  const lightbox = el('lightbox');
-  el('photo-grid').addEventListener('click', e => {
-    const item = e.target.closest('.photo-item');
-    if (!item) return;
-    const idx = parseInt(item.dataset.idx);
-    const photo = photoList[idx];
-    if (!photo) return;
-    el('lightbox-img').src = photo.image || ('blogs/photos/' + photo.file);
-    el('lightbox-caption').textContent = photo.caption;
-    lightbox.classList.add('open');
-  });
-  lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') lightbox.classList.remove('open'); });
-
-  // ── Tabs ────────────────────────────────────────────────────
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelectorAll('.tab-btn').forEach(b => b.removeAttribute('aria-current'));
-      btn.setAttribute('aria-current', 'page');
-      el('tab-' + btn.dataset.tab).classList.add('active');
-      history.replaceState(null, '', '#' + btn.dataset.tab);
-
-      // Reset blog view when switching away
-      if (btn.dataset.tab !== 'blog') {
-        el('article-view').classList.remove('active');
-        el('blog-list-view').classList.remove('hidden');
-      }
-    });
-  });
-
-  document.querySelector('.nav-inner').addEventListener('keydown', e => {
-    const current = e.target.closest('.tab-btn');
-    if (!current) return;
-    const buttons = [...document.querySelectorAll('.tab-btn')];
-    const horizontal = window.matchMedia('(max-width:760px)').matches;
-    const forward = horizontal ? 'ArrowRight' : 'ArrowDown';
-    const backward = horizontal ? 'ArrowLeft' : 'ArrowUp';
-    if (![forward, backward].includes(e.key)) return;
-    e.preventDefault();
-    const step = e.key === forward ? 1 : -1;
-    buttons[(buttons.indexOf(current) + step + buttons.length) % buttons.length].focus();
-  });
-
-  // ── Hash-based routing ──────────────────────────────────────
-  function applyHash() {
-    const hash = window.location.hash.slice(1);
-    const tabs = ['home','publications','news','blog','photography','personal'];
-    if (tabs.includes(hash)) {
-      document.querySelector(`[data-tab="${hash}"]`).click();
-    }
-  }
-  window.addEventListener('hashchange', applyHash);
-  applyHash();
-});
-</script>
-
+        </div>
+        <div class="news-list" id="news-list" role="region" aria-label="Scrollable updates"><p role="status">Loading updates…</p></div>
+      </section>
+    </section>
+    <section id="page-experience" class="page" aria-labelledby="experience-title" hidden>
+      <div class="page-heading">
+        <h1 id="experience-title">Experience</h1>
+        <p>My work and education, starting with my most recent roles.</p>
+      </div>
+      <ol class="trail" id="trail" aria-label="Education and work timeline"></ol>
+    </section>
+    <section id="page-notes" class="page" aria-labelledby="notes-title" hidden>
+      <div class="page-heading"><h1 id="notes-title">Contemplations</h1></div>
+      <div class="tabs" id="note-tabs" role="tablist" aria-label="Note topics"></div>
+      <div id="note-panels"></div>
+    </section>
+    <section id="page-photography" class="page" aria-labelledby="gallery-title" hidden>
+      <div class="page-heading gallery-heading">
+        <h1 id="gallery-title">Photography <em>&amp;</em><br>Pencil Drawings</h1>
+        <a class="button secondary" href="https://app.pagescms.org/" target="_blank" rel="noopener" aria-label="Upload a photo or drawing through Pages CMS">Upload photo or drawing</a>
+      </div>
+      <div class="gallery-filters" role="group" aria-label="Filter artworks">
+        <button type="button" data-medium="all" aria-pressed="true">All</button>
+        <button type="button" data-medium="photo" aria-pressed="false">Photography</button>
+        <button type="button" data-medium="drawing" aria-pressed="false">Pencil Drawings</button>
+      </div>
+      <p id="gallery-status" role="status">Loading gallery…</p>
+      <div class="gallery" id="gallery"></div>
+    </section>
+  </main>
+  <footer class="wrap"><span id="footer-name">Ahmed Elhady</span><a id="footer-link">LinkedIn</a></footer>
+  <dialog id="lightbox" aria-label="Artwork preview">
+    <button type="button" id="close-lightbox" aria-label="Close artwork preview">×</button>
+    <figure><img id="lightbox-image" alt=""><figcaption id="lightbox-caption"></figcaption></figure>
+  </dialog>
 </body>
 </html>
